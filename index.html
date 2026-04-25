@@ -3,170 +3,692 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACES Club — Week 3 Communication Playbook</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>ACES Club — Communication Playbook</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0f1e35;--navy-light:#1b2e4a;--gold:#c9a84c;--green:#1a7a3c;--white:#fff;--off:#f5f6f8;--gray:#8a94a6;--gl:#e8eaee;--text:#1a2030;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--text);}
-.site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3);}
-.header-inner{max-width:860px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;gap:16px;}
-.logo-badge{background:var(--gold);color:var(--navy);font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;padding:6px 14px;border-radius:4px;flex-shrink:0;}
-.header-text h1{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;line-height:1;}
-.header-text p{font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
-.week-badge{margin-left:auto;background:var(--gold);color:var(--navy);font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;padding:5px 12px;border-radius:20px;}
-.day-nav{background:var(--navy-light);border-top:1px solid rgba(255,255,255,.07);overflow-x:auto;scrollbar-width:none;}
-.day-nav::-webkit-scrollbar{display:none;}
-.day-nav-inner{max-width:860px;margin:0 auto;display:flex;padding:0 16px;}
-.nav-btn{background:none;border:none;color:var(--gray);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:12px 16px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;}
-.nav-btn:hover{color:#fff;}.nav-btn.active{color:var(--gold);border-bottom-color:var(--gold);}
-.main{max-width:860px;margin:0 auto;padding:28px 20px 60px;}
-.day-panel{display:none;}.day-panel.active{display:block;}
-.day-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--gl);}
-.day-icon{width:52px;height:52px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
-.day-info h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;color:var(--navy);}
-.day-info p{font-size:13px;color:var(--gray);margin-top:2px;}
-.send-order{background:var(--navy);border-radius:12px;padding:18px 20px;margin-bottom:24px;}
-.send-order h3{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.order-steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
-.order-step{display:flex;align-items:center;gap:8px;}
-.step-num{width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.step-label{font-size:12px;color:rgba(255,255,255,.75);font-weight:500;white-space:nowrap;}
-.sep{color:rgba(255,255,255,.2);font-size:12px;}
-.card{background:#fff;border-radius:14px;margin-bottom:18px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);border:1px solid var(--gl);}
-.card-head{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--gl);flex-wrap:wrap;}
-.badge{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff;padding:3px 9px;border-radius:4px;flex-shrink:0;}
-.card-title{font-size:14px;font-weight:600;color:var(--text);flex:1;}
-.card-time{font-family:'DM Mono',monospace;font-size:12px;color:var(--gray);flex-shrink:0;}
-.card-body{padding:16px 18px;font-size:14.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;}
-.card-foot{padding:10px 18px;border-top:1px solid var(--gl);display:flex;justify-content:flex-end;}
-.copy-btn{background:var(--navy);color:#fff;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .15s;}
-.copy-btn:hover{background:var(--navy-light);}.copy-btn.copied{background:var(--green);}
-.bwelcome{background:#0f4c81;}.brsvp{background:#1a7a3c;}.bpoll{background:#7b3fa0;}
-.btip{background:#c9560a;}.bbeg{background:#b8860b;}.bchal{background:#b5273a;}
-.bspot{background:#1a6b72;}.bshot{background:#c9560a;}.bmem{background:#0f4c81;}
-.bprev{background:#3a4f6a;}.bannounce{background:#b5273a;}
-.ov-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
-.ov-card{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--gl);text-align:center;}
-.ov-day{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
-.ov-det{font-size:13px;color:var(--gray);line-height:1.5;}
-.key-links{background:var(--navy);border-radius:12px;padding:18px 20px;margin-bottom:24px;}
-.key-links h3{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
-.kl-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);gap:12px;}
-.kl-row:last-child{border-bottom:none;}
-.kl-label{font-size:13px;color:rgba(255,255,255,.7);font-weight:500;flex-shrink:0;}
-.kl-url{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);word-break:break-all;text-align:right;}
-.sec-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--navy);margin:28px 0 14px;}
-.sched{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--gl);}
-.sched th{background:var(--navy);color:var(--gold);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:11px 14px;text-align:left;}
-.sched td{padding:10px 14px;border-bottom:1px solid var(--gl);}
-.sched tr:last-child td{border-bottom:none;}
-.sched tr:nth-child(even) td{background:var(--off);}
-@media(max-width:600px){.header-inner{padding:14px 16px;}.main{padding:20px 14px 60px;}.nav-btn{padding:11px 10px;font-size:12px;}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1a7a4a;--green-dark:#0f4f2f;--green-light:#e8f5ee;--green-mid:#2d9e6a;
+  --gold:#c9a84c;--gold-light:#faeeda;
+  --black:#111;--white:#fff;--gray:#666;--light:#f8f8f6;--border:#e0e0e0;
+  --rookie:#888780;--rally:#378add;--ace:#c9a84c;--elite:#1a7a4a;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--black);min-height:100vh}
+
+/* ── NAV ── */
+.nav{background:var(--green-dark);padding:0;display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100}
+.nav::-webkit-scrollbar{display:none}
+.nav-btn{padding:14px 20px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s}
+.nav-btn.active{color:white;border-bottom-color:var(--gold)}
+.nav-btn:hover{color:white}
+
+/* ── HEADER ── */
+.hero{background:var(--green-dark);padding:32px 24px 28px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border:1px solid rgba(201,168,76,0.15);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:180px;height:180px;border:1px solid rgba(201,168,76,0.1);border-radius:50%}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:52px;color:white;letter-spacing:8px;line-height:1}
+.hero-sub{font-size:11px;color:var(--gold);letter-spacing:4px;text-transform:uppercase;margin-top:6px}
+.hero-desc{font-size:13px;color:rgba(255,255,255,0.6);margin-top:12px;line-height:1.6;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* ── PANELS ── */
+.panel{display:none;padding:24px 16px 60px;max-width:760px;margin:0 auto}
+.panel.active{display:block}
+
+/* ── CARDS ── */
+.card{background:white;border-radius:14px;border:0.5px solid var(--border);padding:20px;margin-bottom:16px}
+.card-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--green-dark);margin-bottom:4px}
+.card-sub{font-size:12px;color:var(--gray);margin-bottom:14px}
+.section-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin:24px 0 10px}
+
+/* ── BADGES ── */
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;margin-right:6px;margin-bottom:4px}
+.b-time{background:#e8f5ee;color:#085041}
+.b-rsvp{background:#e1f5ee;color:#085041}
+.b-poll{background:#faeeda;color:#633806}
+.b-begin{background:#e6f1fb;color:#0c447c}
+.b-welcome{background:#eaf3de;color:#27500a}
+.b-engage{background:#eeedfe;color:#3c3489}
+.b-alert{background:#fcebeb;color:#791f1f}
+.b-rank{background:#faeeda;color:#854f0b}
+
+/* ── MESSAGE BOX ── */
+.msg-wrap{margin-bottom:14px}
+.msg-header{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.msg-label{font-size:12px;font-weight:600;color:var(--green-dark)}
+.msg-time{font-size:11px;color:var(--gray);margin-left:auto}
+.msg-box{background:var(--light);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.7;color:#333;white-space:pre-wrap}
+.copy-btn{margin-top:8px;padding:5px 14px;border-radius:8px;border:0.5px solid var(--border);font-size:11px;font-weight:500;cursor:pointer;background:white;color:var(--gray);letter-spacing:0.5px;transition:all 0.15s}
+.copy-btn:hover{background:var(--green-light);border-color:var(--green);color:var(--green-dark)}
+.copy-btn.ok{background:var(--green-light);border-color:var(--green);color:var(--green-dark)}
+
+/* ── ORDER GUIDE ── */
+.order-guide{background:var(--green-dark);border-radius:10px;padding:14px 16px;margin-bottom:20px}
+.order-guide-title{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.order-steps{display:flex;flex-wrap:wrap;gap:6px}
+.order-step{background:rgba(255,255,255,0.1);border-radius:6px;padding:5px 12px;font-size:11px;color:white;display:flex;align-items:center;gap:6px}
+.order-num{background:var(--gold);color:var(--green-dark);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+
+/* ── RANKING ── */
+.rank-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+.tier-card{border-radius:12px;padding:16px;text-align:center;border:0.5px solid var(--border)}
+.tier-icon{font-size:28px;margin-bottom:6px}
+.tier-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px}
+.tier-pts{font-size:11px;color:var(--gray);margin-top:2px}
+.tier-rookie{background:#f5f5f3}
+.tier-rally{background:#e6f1fb}
+.tier-ace{background:#faeeda}
+.tier-elite{background:#e8f5ee}
+
+.pts-table{width:100%;border-collapse:collapse;font-size:13px}
+.pts-table th{background:var(--green-dark);color:white;padding:10px 14px;text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.pts-table td{padding:10px 14px;border-bottom:0.5px solid var(--border)}
+.pts-table tr:last-child td{border:none}
+.pts-table tr:nth-child(even) td{background:var(--light)}
+.pts-val{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--green);letter-spacing:1px}
+
+/* ── WEEKLY GRID ── */
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:20px}
+.day-col{background:white;border-radius:10px;border:0.5px solid var(--border);padding:10px 8px;text-align:center}
+.day-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--green-dark)}
+.day-dot{width:6px;height:6px;border-radius:50%;margin:4px auto}
+.day-dot.play{background:var(--green)}
+.day-dot.begin{background:var(--gold)}
+.day-dot.rest{background:#ddd}
+.day-tag{font-size:9px;color:var(--gray);margin-top:4px;line-height:1.3}
+
+/* ── MONTHLY ── */
+.month-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.month-card{background:white;border-radius:12px;border:0.5px solid var(--border);padding:16px}
+.month-card-title{font-size:12px;font-weight:600;color:var(--green-dark);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.month-card ul{list-style:none;font-size:12px;color:var(--gray);line-height:2}
+.month-card ul li::before{content:'→ ';color:var(--green)}
+
+/* ── ENGAGEMENT ── */
+.eng-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.eng-card{background:white;border-radius:12px;border:0.5px solid var(--border);padding:16px}
+.eng-icon{font-size:24px;margin-bottom:8px}
+.eng-title{font-size:13px;font-weight:600;color:var(--green-dark);margin-bottom:4px}
+.eng-desc{font-size:12px;color:var(--gray);line-height:1.6}
+.eng-freq{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--green-light);color:var(--green-dark);margin-top:6px}
+
+@media(max-width:520px){
+  .week-grid{grid-template-columns:repeat(4,1fr)}
+  .hero-title{font-size:38px}
+  .nav-btn{padding:12px 14px;font-size:11px}
+}
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo-badge">ACES</div>
-    <div class="header-text"><h1>Communication Playbook 2026</h1><p>Official WhatsApp messaging guide — ACES Club Inc.</p></div>
-    <div class="week-badge">WEEK 3</div>
-  </div>
-  <nav class="day-nav"><div class="day-nav-inner">
-    <button class="nav-btn active" onclick="showDay('overview',this)">Overview</button>
-    <button class="nav-btn" onclick="showDay('monday',this)">Monday</button>
-    <button class="nav-btn" onclick="showDay('tuesday',this)">Tuesday</button>
-    <button class="nav-btn" onclick="showDay('wednesday',this)">Wednesday</button>
-    <button class="nav-btn" onclick="showDay('thursday',this)">Thursday</button>
-    <button class="nav-btn" onclick="showDay('friday',this)">Friday</button>
-    <button class="nav-btn" onclick="showDay('saturday',this)">Saturday</button>
-    <button class="nav-btn" onclick="showDay('sunday',this)">Sunday</button>
-  </div></nav>
-</header>
-
-<main class="main">
-
-<!-- ═══ OVERVIEW ═══ -->
-<div class="day-panel active" id="panel-overview">
-  <div class="day-header"><div class="day-icon">🎾</div><div class="day-info"><h2>Week 3 — At a Glance</h2><p>Daily schedule, key links, posting times</p></div></div>
-  <div class="ov-grid">
-    <div class="ov-card"><div class="ov-day">Mon</div><div class="ov-det">Play 5:30–7:30</div></div>
-    <div class="ov-card"><div class="ov-day">Tue</div><div class="ov-det">Play 5:30–7:30</div></div>
-    <div class="ov-card"><div class="ov-day">Wed</div><div class="ov-det">Play 5:30–7:30</div></div>
-    <div class="ov-card"><div class="ov-day">Thu</div><div class="ov-det">Play 5:30–7:30 + Beginners</div></div>
-    <div class="ov-card"><div class="ov-day">Fri</div><div class="ov-det">Play 5:30–7:30 + Shot of Week</div></div>
-    <div class="ov-card"><div class="ov-day">Sat</div><div class="ov-det">Beginners 10:30 + Play till 1:30</div></div>
-    <div class="ov-card"><div class="ov-day">Sun</div><div class="ov-det">Casual + Week 4 Preview</div></div>
-  </div>
-  <div class="key-links"><h3>Key Links</h3>
-    <div class="kl-row"><span class="kl-label">Daily RSVP</span><span class="kl-url">[YOUR POSH DAILY LINK]</span></div>
-    <div class="kl-row"><span class="kl-label">Member Waiver</span><span class="kl-url">aces-member-waiver.netlify.app</span></div>
-    <div class="kl-row"><span class="kl-label">Thursday Beginners</span><span class="kl-url">posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30</span></div>
-    <div class="kl-row"><span class="kl-label">Saturday Beginners</span><span class="kl-url">posh.vip/e/aces-beginner-experience-2026-4-11-16-30</span></div>
-    <div class="kl-row"><span class="kl-label">Mubadala Volunteer Sign-Up</span><span class="kl-url">mubadalacitidcopen.com/en/event-info/volunteers</span></div>
-  </div>
-  <div class="sec-title">Daily Posting Schedule</div>
-  <table class="sched"><thead><tr><th>Time</th><th>Message</th><th>Days</th></tr></thead><tbody>
-    <tr><td>7:00 AM</td><td>Morning welcome</td><td>Daily</td></tr>
-    <tr><td>7:30 AM</td><td>📣 Mubadala Volunteer Announcement</td><td>Daily</td></tr>
-    <tr><td>8:00 AM</td><td>Daily RSVP + waiver link</td><td>Mon–Sat</td></tr>
-    <tr><td>9:00 AM</td><td>Court location poll</td><td>Mon–Sat</td></tr>
-    <tr><td>9:30 AM</td><td>Beginner RSVP + waiver</td><td>Thu & Sat only</td></tr>
-    <tr><td>10:00 AM</td><td>Tip of the day from Femi</td><td>Mon–Fri</td></tr>
-    <tr><td>11:00 AM</td><td>Engagement post (varies by day)</td><td>Daily</td></tr>
-    <tr><td>Sun 10AM</td><td>Week preview + rankings update</td><td>Sunday</td></tr>
-  </tbody></table>
+<div class="hero">
+  <div class="hero-title">ACES</div>
+  <div class="hero-sub">Communication Playbook 2026</div>
+  <div class="hero-desc">Official daily messaging guide for ACES Club Inc. — WhatsApp group communication, ranking system, and engagement strategy.</div>
+  <div style="margin-top:14px;background:rgba(201,168,76,0.15);border-radius:8px;padding:10px 16px;display:inline-block;font-size:12px;color:var(--gold);letter-spacing:1px">🔗 Live at: aces-club-posting-schedule.netlify.app</div>
 </div>
 
-<!-- ═══ MONDAY ═══ -->
-<div class="day-panel" id="panel-monday">
-  <div class="day-header"><div class="day-icon">🌅</div><div class="day-info"><h2>Monday — Week 3</h2><p>Rankings update drops today</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">10:00 AM — Tip</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">11:00 AM — Rankings</div></div>
-  </div></div>
+<nav class="nav">
+  <button class="nav-btn active" onclick="show('overview',this)">Overview</button>
+  <button class="nav-btn" onclick="show('monday',this)">Monday</button>
+  <button class="nav-btn" onclick="show('tuesday',this)">Tuesday</button>
+  <button class="nav-btn" onclick="show('wednesday',this)">Wednesday</button>
+  <button class="nav-btn" onclick="show('thursday',this)">Thursday</button>
+  <button class="nav-btn" onclick="show('friday',this)">Friday</button>
+  <button class="nav-btn" onclick="show('saturday',this)">Saturday</button>
+  <button class="nav-btn" onclick="show('sunday',this)">Sunday</button>
+  
+  <button class="nav-btn" onclick="show('weekly',this)">Weekly</button>
+  <button class="nav-btn" onclick="show('monthly',this)">Monthly</button>
+  <button class="nav-btn" onclick="show('engage',this)">Engagement</button>
+  <button class="nav-btn" onclick="show('week2',this)">Week 2</button>
+  <button class="nav-btn" onclick="show('week3',this)">Week 3</button>
+  <button class="nav-btn" onclick="show('week3',this)">Week 3</button>
+</nav>
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="mon-1">🌅 Good morning ACES Family! Week 3 — we keep going!
-Two weeks down and you have not let up. Not once. That kind of consistency is rare and it does not go unnoticed. Every time you show up you are telling this community that you belong here — and you do.
-Week 3 is where habits become identity. Let's go get it. 🎾💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-1',this)">Copy</button></div></div>
+<!-- ══════════════════════════════════════════════════════ OVERVIEW -->
+<div id="overview" class="panel active">
+  <div class="section-label">Weekly Schedule at a Glance</div>
+  <div class="week-grid">
+    <div class="day-col"><div class="day-name">MON</div><div class="day-dot play"></div><div class="day-tag">Play 5:30–7:30</div></div>
+    <div class="day-col"><div class="day-name">TUE</div><div class="day-dot play"></div><div class="day-tag">Play 5:30–7:30</div></div>
+    <div class="day-col"><div class="day-name">WED</div><div class="day-dot play"></div><div class="day-tag">Play 5:30–7:30</div></div>
+    <div class="day-col"><div class="day-name">THU</div><div class="day-dot play"></div><div class="day-dot begin"></div><div class="day-tag">Play 5:30–7:30 + Beginners</div></div>
+    <div class="day-col"><div class="day-name">FRI</div><div class="day-dot play"></div><div class="day-tag">Play 5:30–7:30 + Shot of Week</div></div>
+    <div class="day-col"><div class="day-name">SAT</div><div class="day-dot begin"></div><div class="day-dot play"></div><div class="day-tag">Beginners 10:30 + Play till 1:30</div></div>
+    <div class="day-col"><div class="day-name">SUN</div><div class="day-dot play"></div><div class="day-tag">Casual + Week Preview</div></div>
+  </div>
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="mon-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-2',this)">Copy</button></div></div>
+  <div class="section-label">Key Links</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px">
+      <div><div style="font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray);text-transform:uppercase;margin-bottom:4px">Daily RSVP</div><div style="color:var(--green)">[YOUR POSH DAILY LINK]</div></div>
+      <div><div style="font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray);text-transform:uppercase;margin-bottom:4px">Member Waiver</div><div style="color:var(--green)">aces-member-waiver.netlify.app</div></div>
+      <div><div style="font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray);text-transform:uppercase;margin-bottom:4px">Thursday Beginners</div><div style="color:var(--green);font-size:11px">posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30</div></div>
+      <div><div style="font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray);text-transform:uppercase;margin-bottom:4px">Saturday Beginners</div><div style="color:var(--green);font-size:11px">posh.vip/e/aces-beginner-experience-2026-4-11-16-30</div></div>
+    </div>
+  </div>
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Daily RSVP + Waiver</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="mon-3">🎾 Week 3 kicks off TODAY — are you playing?
+  <div class="section-label">Daily Posting Schedule</div>
+  <div class="card">
+    <table class="pts-table">
+      <tr><th>Time</th><th>Message</th><th>Days</th></tr>
+      <tr><td>7:00 AM</td><td>Morning welcome</td><td>Daily</td></tr>
+      <tr><td>8:00 AM</td><td>Daily RSVP + waiver link</td><td>Mon–Sat</td></tr>
+      <tr><td>9:00 AM</td><td>Court location poll + waiver</td><td>Mon–Sat</td></tr>
+      <tr><td>9:30 AM</td><td>Beginner RSVP + waiver</td><td>Thu & Sat only</td></tr>
+      <tr><td>10:00 AM</td><td>Tip of the day from Femi</td><td>Mon–Fri</td></tr>
+      <tr><td>11:00 AM</td><td>Engagement post (varies by day)</td><td>Daily</td></tr>
+      <tr><td>Sunday 10AM</td><td>Week preview + rankings update</td><td>Sunday</td></tr>
+    </table>
+  </div>
+
+  <div class="section-label">Ranking Tiers</div>
+  <div class="rank-tiers">
+    <div class="tier-card tier-rookie"><div class="tier-icon">🎾</div><div class="tier-name" style="color:var(--rookie)">Rookie</div><div class="tier-pts">0 – 50 pts</div></div>
+    <div class="tier-card tier-rally"><div class="tier-icon">⚡</div><div class="tier-name" style="color:#185fa5">Rally</div><div class="tier-pts">51 – 150 pts</div></div>
+    <div class="tier-card tier-ace"><div class="tier-icon">🏆</div><div class="tier-name" style="color:#854f0b">Ace</div><div class="tier-pts">151 – 300 pts</div></div>
+    <div class="tier-card tier-elite"><div class="tier-icon">👑</div><div class="tier-name" style="color:var(--green-dark)">Elite</div><div class="tier-pts">301+ pts</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ MONDAY -->
+<div id="monday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM — Tip of the Day</div>
+      
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="mon1">🌅 Good morning ACES Family! Happy Monday!
+
+A new week, a fresh start and the courts are calling. Whether you crushed it last week or you're coming back from a tough one — today is a new day and this family has your back. 💚
+
+There is no better way to start the week than knowing you've got a community that shows up for each other. Let's make this week the best one yet! 🎾🔥</div>
+  <button class="copy-btn" onclick="cp('mon1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="mon2">🎾 Playing today? Let us know so we can plan the best session possible for everyone!
+
 📋 Daily RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-Play time: 5:30 – 7:30 PM
-Three weeks in and still going. Let's pack that court tonight! 💪</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="mon-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+Play time: 5:30 – 7:30 PM
+No RSVP = no guaranteed spot! 🙌</div>
+  <button class="copy-btn" onclick="cp('mon2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="mon3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
+
 📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-4',this)">Copy</button></div></div>
+  <button class="copy-btn" onclick="cp('mon3',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge btip">TIP</span><span class="card-title">Femi's Tip of the Day</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="mon-5">💡 Monday Tip from Coach Femi:
-"The difference between a good player and a great one is what they do when nothing is going right. Tonight if your shots are off — slow down. Take a breath. Reset between points. The mental reset is as important as any technical skill you will ever learn.
-Champions are not made on good days. They are revealed on the hard ones. 🎾"
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="mon4">💡 Monday Tip from Coach Femi:
+
+"Start your week with intention. Before you step on the court today, pick ONE thing to focus on — your footwork, your serve toss, your follow-through. A player who practices with purpose improves ten times faster than one who just hits balls.
+
+This week, be intentional. 🎾"
+
 — Femi, ACES Club</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-5',this)">Copy</button></div></div>
+  <button class="copy-btn" onclick="cp('mon4',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bmem">🏆 RANKINGS</span><span class="card-title">Week 3 Rankings Update</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="mon-6">🏆 ACES WEEKLY LEADERBOARD — Week 3 Update 🎾
+  
+</div>
+
+<!-- ══════════════════════════════════════════════════════ TUESDAY -->
+<div id="tuesday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM — Tip of the Day</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM — Weekly Challenge</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="tue1">🎾 Good morning ACES Family! Happy Tuesday!
+
+There is no better way to break up the week than getting on the court with people who love this game as much as you do. That energy is contagious — and THIS group brings it every single time. 🔥
+
+Shake off the Monday, lace up and let's go! 💚</div>
+  <button class="copy-btn" onclick="cp('tue1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="tue2">🎾 Tuesday session is ON! RSVP so we know who's joining us today.
+
+📋 Daily RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Play time: 5:30 – 7:30 PM
+Every player matters — we want to see you out there! 💪</div>
+  <button class="copy-btn" onclick="cp('tue2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="tue3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+  <button class="copy-btn" onclick="cp('tue3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="tue4">💡 Tuesday Tip from Coach Femi:
+
+"Your feet are your most important tool on the court. Before the ball even leaves your opponent's racket, your feet should already be moving. Practice the split step — a small hop right as your opponent strikes the ball. It primes your body to move in any direction instantly.
+
+Master your footwork and everything else gets easier. 🎾"
+
+— Femi, ACES Club</div>
+  <button class="copy-btn" onclick="cp('tue4',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Weekly Challenge</span><span class="msg-time">11:00 AM</span></div>
+  <div class="msg-box" id="tue5">🎯 THIS WEEK'S ACES CHALLENGE:
+
+"The Consistency King/Queen Challenge"
+
+Every session this week — aim to complete 10 consecutive rallies without an error with a partner. Doesn't matter how slow. Controlled, intentional hitting wins this one. 🎾
+
+✅ Complete it = 5 bonus ranking points
+📸 Record it and post it here for the group!
+
+Who's taking it on? Drop a 🙋 below! @all</div>
+  <button class="copy-btn" onclick="cp('tue5',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ WEDNESDAY -->
+<div id="wednesday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM — Tip of the Day</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM — Member Spotlight</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="wed1">🌤️ Good morning ACES Family! It's Wednesday — we're halfway there!
+
+Midweek is the perfect time to reset, refocus and remind yourself why you started. Every time you step on that court you are investing in yourself — your health, your skills, your community. That is something to be proud of. 🙌
+
+Let's get out there and make the most of today! 🎾💚</div>
+  <button class="copy-btn" onclick="cp('wed1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="wed2">🎾 Hump day = court day! RSVP so we can plan today's session for everyone.
+
+📋 Daily RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Play time: 5:30 – 7:30 PM 💚</div>
+  <button class="copy-btn" onclick="cp('wed2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="wed3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+  <button class="copy-btn" onclick="cp('wed3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="wed4">💡 Wednesday Tip from Coach Femi:
+
+"Consistency beats power every single time. I see players try to hit winners on every ball and wonder why they keep losing rallies. The player who keeps the ball in play wins more points than the player who goes for big shots.
+
+Build your consistency first. The power will come naturally as your confidence grows. 🎾"
+
+— Femi, ACES Club</div>
+  <button class="copy-btn" onclick="cp('wed4',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Wednesday Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
+  <div class="msg-box" id="wed5">⭐ ACES MEMBER SPOTLIGHT — [MEMBER NAME]
+
+Every week we shine a light on one of our amazing ACES Family members. This week it's all about [MEMBER NAME]! 🎾
+
+🏠 Hometown: [City]
+🎾 How long playing: [X years/months]
+💚 Favorite thing about ACES: "[Quote from member]"
+🏆 Recent achievement: [Win, milestone, graduation, etc.]
+
+[MEMBER NAME] — we see you, we appreciate you and we are so glad you are part of this family! 👏💚
+
+Drop some love in the comments! ⬇️</div>
+  <button class="copy-btn" onclick="cp('wed5',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ THURSDAY -->
+<div id="thursday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div>
+      <div class="order-step"><div class="order-num">5</div>10:00 AM — Tip of the Day</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="thu1">🎾 Good morning ACES Family! It's Thursday — one of our favorite days!
+
+Today we have something for EVERYONE. Experienced players bring the heat at Russett, and our beginners get their moment with Coach Austin at Montpelier. No matter where you are in your tennis journey — there is a place for you in this family. 💚
+
+That is what ACES is built on. Community. Growth. And a whole lot of tennis. Let's go! 🔥</div>
+  <button class="copy-btn" onclick="cp('thu1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="thu2">🎾 Playing today? RSVP so we can plan sessions for all levels!
+
+📋 Daily RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Play time: 5:30 – 7:30 PM
+We want to see you out there! 💪</div>
+  <button class="copy-btn" onclick="cp('thu2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="thu3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+  <button class="copy-btn" onclick="cp('thu3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Thursday Beginner RSVP + Waiver</span><span class="msg-time">9:30 AM</span></div>
+  <div class="msg-box" id="thu4">🌟 Beginners — TODAY is your day!
+
+Thursday Beginner Experience is TONIGHT with Coach Austin! 🎾
+
+📍 Montpelier Tennis Court, 12771 Laurel-Bowie Rd
+⏰ 5:30 – 7:30 PM
+
+This is a safe, fun and welcoming space designed just for you. No judgment, no pressure — just learning, growing and enjoying the game. We are SO proud of every single one of you for showing up! 👏
+
+📋 RSVP for Beginner Session: https://posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30?t=series
+📝 Waiver (mandatory before stepping on court): https://aces-member-waiver.netlify.app/
+
+Coach Austin is ready — are you? Let's go! 💚</div>
+  <button class="copy-btn" onclick="cp('thu4',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="thu5">💡 Thursday Tip from Coach Femi:
+
+"To all our beginners — the most important thing you can do right now is not worry about winning. Focus on ONE skill at a time. Today in your session with Coach Austin, pick one thing: your grip, your swing path or your court positioning. Master that one thing.
+
+To our experienced players — remember you were a beginner once too. Be the energy that makes someone want to come back next week. 🎾"
+
+— Femi, ACES Club</div>
+  <button class="copy-btn" onclick="cp('thu5',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ FRIDAY -->
+<div id="friday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM — Tip of the Day</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM — Shot of the Week</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="fri1">🎉 GOOD MORNING ACES FAMILY — IT'S FRIDAY!!
+
+The energy in this group never gets old. You all show up week after week, put in the work and inspire each other to keep going. That is not something everyone has — and we don't take it for granted. 🙏
+
+Finish the week strong tonight AND get excited — Saturday morning is going to be 🔥
+
+The weekend belongs to us! 🎾💚</div>
+  <button class="copy-btn" onclick="cp('fri1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Weekend Preview + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="fri2">🎾 Last session of the work week — let's make it count! RSVP below!
+
+📋 Today's RSVP: [YOUR POSH DAILY LINK]
+📅 Saturday Beginner RSVP: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Tonight: 5:30 – 7:30 PM
+Tomorrow: Beginners 10:30 AM + General play till 1:30 PM
+
+Big weekend ahead! 💪🎾</div>
+  <button class="copy-btn" onclick="cp('fri2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="fri3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+  <button class="copy-btn" onclick="cp('fri3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="fri4">💡 Friday Tip from Coach Femi:
+
+"End the week strong. Whatever didn't go right this week on the court — leave it here. Tonight's session is about finishing with confidence, not frustration.
+
+Play loose. Smile more. Compete harder. And whatever happens — enjoy every single point. That is what this game is about. 🎾"
+
+— Femi, ACES Club</div>
+  <button class="copy-btn" onclick="cp('fri4',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">📸 SHOT OF THE WEEK</span><span class="msg-label">Friday Feature</span><span class="msg-time">11:00 AM</span></div>
+  <div class="msg-box" id="fri5">📸 IT'S SHOT OF THE WEEK FRIDAY! 🎾🔥
+
+Drop your best photo or video from this week's sessions right here in the chat! Whether it's a winning point, a perfect form shot, a great rally or just a moment that captures the ACES vibe — we want to see it!
+
+The most 🔥 shot gets a shoutout in next Monday's ranking post!
+
+📸 Post your shot below ⬇️ @all
+
+Let's see what you've got ACES Family! 💚</div>
+  <button class="copy-btn" onclick="cp('fri5',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ SATURDAY -->
+<div id="saturday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM — New Member Welcome</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+  <div class="msg-box" id="sat1">☀️ GOOD MORNING ACES FAMILY! It's Saturday — the best day of the week! 🎾
+
+There is truly nothing like a Saturday morning on the court with this group. The vibes are always right, the energy is always high and everyone brings the best version of themselves.
+
+Whether you're a beginner stepping on the court for the first time or a veteran who's been grinding for years — you are part of something special here. Welcome to your ACES Saturday! Let's make it one to remember. 💚🔥</div>
+  <button class="copy-btn" onclick="cp('sat1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Saturday RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+  <div class="msg-box" id="sat2">🎾 Who's coming out today? RSVP so we can prep the best experience for everyone!
+
+📋 Daily RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+⏰ General play: All day till 1:30 PM
+We want to see EVERYONE out here today! 🙌💚</div>
+  <button class="copy-btn" onclick="cp('sat2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="sat3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+  <button class="copy-btn" onclick="cp('sat3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Saturday Beginner RSVP + Waiver</span><span class="msg-time">9:30 AM</span></div>
+  <div class="msg-box" id="sat4">🌟 Good morning Beginners — your Saturday session is HERE!
+
+Coach Austin is ready and waiting! 🎾
+
+📍 Montpelier Tennis Court, 12771 Laurel-Bowie Rd
+⏰ 10:30 AM – 12:30 PM
+
+Every single one of you has come so far and we could not be more proud. Come as you are — this morning is about fun, confidence and growth! 💪
+
+📋 RSVP for Saturday Beginners: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver (mandatory before stepping on court): https://aces-member-waiver.netlify.app/
+
+See you at 10:30! Let's have an amazing morning! ☀️💚</div>
+  <button class="copy-btn" onclick="cp('sat4',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Weekly New Member Announcement</span><span class="msg-time">11:00 AM</span></div>
+  <div class="msg-box" id="sat5">🎉 WELCOME TO THE ACES FAMILY! 🎾💚
+
+We are so excited to introduce our newest members who joined us this week! Please show them some love — drop a 👋 or a 💚 below!
+
+🆕 [New Member Name]
+🆕 [New Member Name]
+🆕 [New Member Name]
+
+Welcome to the family! ACES is built on community and every single person who walks through these courts makes us better. We can't wait to see you grow with us! 🎾
+
+To our existing members — make sure you give our newcomers a warm welcome on the court this week! That's the ACES way. 💚
+
+@all</div>
+  <button class="copy-btn" onclick="cp('sat5',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ SUNDAY -->
+<div id="sunday" class="panel">
+  <div class="order-guide">
+    <div class="order-guide-title">Send in this order</div>
+    <div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>9:00 AM — Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>10:00 AM — Casual Play RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>11:00 AM — Week Preview</div>
+    </div>
+  </div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome + Reflection</span><span class="msg-time">9:00 AM</span></div>
+  <div class="msg-box" id="sun1">🙏 Good morning ACES Family! Happy Sunday!
+
+Take a moment today to rest, recharge and appreciate how far you've come. Whether you played every day this week or just once — you showed up. You put in the work. You are part of a community that genuinely cares about each other and that is rare.
+
+We are grateful for every single one of you. Now rest up — because next week we go again! 💚🎾</div>
+  <button class="copy-btn" onclick="cp('sun1',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Casual Sunday Play + Waiver</span><span class="msg-time">10:00 AM</span></div>
+  <div class="msg-box" id="sun2">🎾 Sunday is FREE FOR ALL day! Who's coming out for some casual play?
+
+No pressure, no structure — just good tennis and good vibes with the ACES family. All levels welcome! 😎
+
+📋 Let us know you're coming: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Drop a 🙋 if you're in! @all</div>
+  <button class="copy-btn" onclick="cp('sun2',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week Ahead Preview + Rankings</span><span class="msg-time">11:00 AM</span></div>
+  <div class="msg-box" id="sun3">📅 HERE'S WHAT'S COMING THIS WEEK — get it in your calendar! 🎾
+
+• Mon – Fri: General play 5:30 – 7:30 PM daily
+• Thu 5:30 PM: Beginner Experience with Coach Austin @ Montpelier
+• Sat 10:30 AM: Saturday Beginner Experience with Coach Austin @ Montpelier
+• Sat till 1:30 PM: General play for all levels
+
+📍 Courts:
+• Russett Tennis Courts, MD 20724 (Experienced)
+• Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+• Greenview Tennis Court (as needed)
+
+🏆 This week's rankings leader: [MEMBER NAME] with [X] points
+📝 Haven't signed your waiver? Do it now: https://aces-member-waiver.netlify.app/
+
+Big week ahead ACES Family. Let's make it count! 💪💚</div>
+  <button class="copy-btn" onclick="cp('sun3',this)">Copy</button></div>
+
+  <div class="msg-wrap"><div class="msg-header"><span class="badge b-alert">WEATHER</span><span class="msg-label">Rain Day Cancellation Template</span><span class="msg-time">Use anytime</span></div>
+  <div class="msg-box" id="sun4">⛈️ ACES Family — weather update!
+
+Unfortunately today's session at [COURT NAME] has been cancelled due to [rain / weather conditions]. Safety first — always! 🙏
+
+We will be back on the court as soon as conditions improve. Keep an eye out for updates here.
+
+In the meantime — use today to rest, stretch and mentally prepare for the next session. The court will be waiting for us! 💚🎾
+
+Stay dry and stay safe ACES Family! ☔</div>
+  <button class="copy-btn" onclick="cp('sun4',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ RANKING -->
+<div id="ranking" class="panel">
+  <div class="card">
+    <div class="card-title">ACES Ranking System</div>
+    <div class="card-sub">Points reset monthly. Updated every Monday morning.</div>
+    <div class="rank-tiers">
+      <div class="tier-card tier-rookie"><div class="tier-icon">🎾</div><div class="tier-name" style="color:var(--rookie)">Rookie</div><div class="tier-pts">0 – 50 pts</div></div>
+      <div class="tier-card tier-rally"><div class="tier-icon">⚡</div><div class="tier-name" style="color:#185fa5">Rally</div><div class="tier-pts">51 – 150 pts</div></div>
+      <div class="tier-card tier-ace"><div class="tier-icon">🏆</div><div class="tier-name" style="color:#854f0b">Ace</div><div class="tier-pts">151 – 300 pts</div></div>
+      <div class="tier-card tier-elite"><div class="tier-icon">👑</div><div class="tier-name" style="color:var(--green-dark)">Elite</div><div class="tier-pts">301+ pts</div></div>
+    </div>
+    <table class="pts-table">
+      <tr><th>Action</th><th>Points</th><th>When</th></tr>
+      <tr><td>Attend a session (RSVP + show up)</td><td><span class="pts-val">+5</span></td><td>Each session</td></tr>
+      <tr><td>Win a match</td><td><span class="pts-val">+10</span></td><td>Per win</td></tr>
+      <tr><td>Complete weekly challenge</td><td><span class="pts-val">+5</span></td><td>Weekly</td></tr>
+      <tr><td>Tournament participation</td><td><span class="pts-val">+15</span></td><td>Per tournament</td></tr>
+      <tr><td>Tournament win</td><td><span class="pts-val">+25</span></td><td>Per tournament win</td></tr>
+      <tr><td>Beginner graduation</td><td><span class="pts-val">+20</span></td><td>One time</td></tr>
+      <tr><td>Refer a new member</td><td><span class="pts-val">+10</span></td><td>Per referral</td></tr>
+      <tr><td>Shot of the Week winner</td><td><span class="pts-val">+5</span></td><td>Weekly</td></tr>
+      <tr><td>Member Spotlight feature</td><td><span class="pts-val">+10</span></td><td>One time</td></tr>
+    </table>
+  </div>
+
+  <div class="section-label">Weekly Leaderboard Template</div>
+  <div class="msg-wrap">
+  <div class="msg-box" id="rank1">🏆 ACES WEEKLY LEADERBOARD — Week of [DATE]
 
 👑 ELITE (301+ pts)
 1. [Member Name] — [pts] pts
@@ -185,391 +707,1285 @@ Champions are not made on good days. They are revealed on the hard ones. 🎾"
 📸 Shot of the Week: [Member Name] 🔥
 🌟 Most Improved: [Member Name]
 
-Three weeks in — keep stacking those points! 💪
-✅ Attend = 5 pts | 🏆 Win = 10 pts | 🎯 Challenge = 5 pts | 👥 Refer = 10 pts | 🎾 Tournament = 15 pts
+Keep showing up, keep earning points! Rankings update every Monday 💪
+
+How to earn points:
+✅ Attend session — 5 pts
+🏆 Win a match — 10 pts
+🎯 Weekly challenge — 5 pts
+🎓 Beginner graduation — 20 pts
+👥 Refer a member — 10 pts
+🎾 Tournament — 15 pts</div>
+  <button class="copy-btn" onclick="cp('rank1',this)">Copy</button></div>
+
+  <div class="section-label">Beginner Graduation Shoutout Template</div>
+  <div class="msg-wrap">
+  <div class="msg-box" id="rank2">🎓 GRADUATION DAY — ACES FAMILY! 🎉🎾
+
+Please join us in congratulating [MEMBER NAME] on officially graduating from the ACES Beginner Program! 👏👏👏
+
+[MEMBER NAME] has completed all sessions, shown incredible growth, demonstrated great sportsmanship and is NOW ready to take on the full ACES court experience!
+
+From all of us — Coach Austin, Coach Femi and the entire ACES Family — we are so incredibly proud of you. This is just the beginning! 🌟
+
+Welcome to the next chapter [MEMBER NAME]! 💚🎾
+
+Drop some 🎉 and 👏 below to celebrate! @all</div>
+  <button class="copy-btn" onclick="cp('rank2',this)">Copy</button></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ WEEKLY -->
+<div id="weekly" class="panel">
+  <div class="section-label">Weekly Recurring Content Calendar</div>
+  <div class="card">
+    <table class="pts-table">
+      <tr><th>Day</th><th>11:00 AM Feature</th><th>Details</th></tr>
+      <tr><td><strong>Monday</strong></td><td>🏆 Rankings Update</td><td>Post updated leaderboard with points</td></tr>
+      <tr><td><strong>Tuesday</strong></td><td>🎯 Weekly Challenge</td><td>New challenge drops every Tuesday</td></tr>
+      <tr><td><strong>Wednesday</strong></td><td>⭐ Member Spotlight</td><td>Based on attendance + achievement</td></tr>
+      <tr><td><strong>Thursday</strong></td><td>💡 Tip of the Day</td><td>Beginner-focused tip from Femi</td></tr>
+      <tr><td><strong>Friday</strong></td><td>📸 Shot of the Week</td><td>Members post best photo/video</td></tr>
+      <tr><td><strong>Saturday</strong></td><td>🆕 New Member Welcome</td><td>Welcome all new members who joined</td></tr>
+      <tr><td><strong>Sunday</strong></td><td>📅 Week Preview</td><td>Full schedule + rankings leader</td></tr>
+    </table>
+  </div>
+
+  <div class="section-label">Weekly Challenge Bank — Rotate These</div>
+  <div class="month-grid">
+    <div class="month-card"><div class="month-card-title">Skill Challenges</div><ul><li>10 consecutive rallies</li><li>Serve placement target</li><li>Crosscourt backhand rally</li><li>Volley at the net</li><li>Second serve consistency</li></ul></div>
+    <div class="month-card"><div class="month-card-title">Fitness Challenges</div><ul><li>10 min warm-up stretch</li><li>Court sprints drill</li><li>Footwork ladder drill</li><li>Shadow swings x50</li><li>Cool-down routine</li></ul></div>
+    <div class="month-card"><div class="month-card-title">Community Challenges</div><ul><li>Play with someone new</li><li>Teach a tip to a beginner</li><li>Post Shot of the Week</li><li>Bring a guest to session</li><li>Complete your waiver</li></ul></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ MONTHLY -->
+<div id="monthly" class="panel">
+  <div class="section-label">Monthly Recap Template</div>
+  <div class="msg-wrap">
+  <div class="msg-box" id="month1">📊 ACES CLUB — MONTHLY RECAP [MONTH YEAR] 🎾
+
+What a month ACES Family! Here's what we accomplished together 💚
+
+📅 SESSIONS
+Total sessions held: [X]
+Total attendance: [X] players
+Most active member: [Name] ([X] sessions)
+
+🏆 RANKINGS
+Month's Top Player: [Name] — [X] pts
+Most Improved: [Name]
+Beginner Graduates: [Names]
+
+🆕 GROWTH
+New members this month: [X]
+Total active members: [X]
+
+📸 HIGHLIGHTS
+[Highlight 1 — tournament, event, milestone]
+[Highlight 2]
+[Highlight 3]
+
+🎯 NEXT MONTH
+[Upcoming event or tournament]
+[Goal for next month]
+
+Thank you all for making ACES what it is. Every single one of you matters to this family. Let's keep building! 💪💚
+
 @all</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('mon-6',this)">Copy</button></div></div>
+  <button class="copy-btn" onclick="cp('month1',this)">Copy</button></div>
+
+  <div class="section-label">Engagement Strategy</div>
+  <div class="eng-grid">
+    <div class="eng-card"><div class="eng-icon">🏆</div><div class="eng-title">Rankings Leaderboard</div><div class="eng-desc">Post updated standings every Monday. Creates friendly competition and gives members a reason to keep showing up.</div><span class="eng-freq">Weekly — Monday</span></div>
+    <div class="eng-card"><div class="eng-icon">🎯</div><div class="eng-title">Weekly Challenge</div><div class="eng-desc">New challenge drops every Tuesday. Earn 5 bonus points for completion. Skill, fitness and community challenges rotate.</div><span class="eng-freq">Weekly — Tuesday</span></div>
+    <div class="eng-card"><div class="eng-icon">⭐</div><div class="eng-title">Member Spotlight</div><div class="eng-desc">Selected based on attendance and achievement. Makes members feel seen and valued. Generates group engagement.</div><span class="eng-freq">Weekly — Wednesday</span></div>
+    <div class="eng-card"><div class="eng-icon">💡</div><div class="eng-title">Tip of the Day</div><div class="eng-desc">Short tennis tip written in Femi's voice. Educational, personal and positions ACES as a learning community.</div><span class="eng-freq">Daily — Mon–Fri</span></div>
+    <div class="eng-card"><div class="eng-icon">📸</div><div class="eng-title">Shot of the Week</div><div class="eng-desc">Members post best moments every Friday. Winner gets a Monday shoutout + 5 bonus points. Builds content organically.</div><span class="eng-freq">Weekly — Friday</span></div>
+    <div class="eng-card"><div class="eng-icon">🆕</div><div class="eng-title">New Member Welcome</div><div class="eng-desc">Every Saturday, welcome new members publicly. Makes newcomers feel immediately part of the family.</div><span class="eng-freq">Weekly — Saturday</span></div>
+    <div class="eng-card"><div class="eng-icon">🎓</div><div class="eng-title">Beginner Graduation</div><div class="eng-desc">Public celebration when a beginner graduates. Motivates other beginners and shows the club's commitment to growth.</div><span class="eng-freq">As earned</span></div>
+    <div class="eng-card"><div class="eng-icon">📊</div><div class="eng-title">Monthly Recap</div><div class="eng-desc">End of month summary with stats, highlights and a look ahead. Builds pride and keeps everyone connected to the mission.</div><span class="eng-freq">Monthly</span></div>
+  </div>
 </div>
 
-<!-- ═══ TUESDAY ═══ -->
-<div class="day-panel" id="panel-tuesday">
-  <div class="day-header"><div class="day-icon">🎾</div><div class="day-info"><h2>Tuesday — Week 3</h2><p>New weekly challenge drops today</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">10:00 AM — Tip</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">11:00 AM — Challenge</div></div>
-  </div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="tue-1">🎾 Good morning ACES Family! Tuesday is here — let's ride!
-You know what I love about this group? Nobody needs to be convinced to show up. You just do it. That speaks to the character of every person in this family and that is something special.
-Keep that same energy today. The court is waiting. 🔥💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-1',this)">Copy</button></div></div>
+<!-- ══════════════════════════════════════════════════════ WEEK 2 -->
+<div id="week2" class="panel">
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="tue-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-2',this)">Copy</button></div></div>
+  <div class="card" style="background:var(--green-dark);border:none;margin-bottom:20px">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">WEEK 2 — DAILY MESSAGES</div>
+    <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Select a day below. All links, times and send order included. Copy and paste directly into WhatsApp.</div>
+  </div>
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Daily RSVP + Waiver</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="tue-3">🎾 Tuesday session is ON — RSVP so we know who's coming out!
+  <div class="section-label">Select Day</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px">
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2mon',this)">Mon</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2tue',this)">Tue</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2wed',this)">Wed</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2thu',this)">Thu</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2fri',this)">Fri</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2sat',this)">Sat</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w2day('w2sun',this)">Sun</button>
+  </div>
+
+  <!-- MONDAY -->
+  <div id="w2mon" class="w2day">
+    <div class="order-guide"><div class="order-guide-title">Monday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2m1">🌅 Good morning ACES Family! Week 2 — let's go!
+
+Last week you showed up and set the tone. This week we raise the bar. Every rep, every rally, every session compounds — and what you put in today you will feel in your game tomorrow.
+
+This family keeps growing and keeps getting better. Let's make Week 2 count! 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w2m1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2m2">🎾 New week, new opportunities! Are you playing today? RSVP so we can plan the best session for everyone.
+
 📋 Daily RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-Play time: 5:30 – 7:30 PM
-Every player on that court makes the session better. We want YOU there! 💪</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="tue-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+Play time: 5:30 – 7:30 PM
+See you on the court! 💪</div>
+    <button class="copy-btn" onclick="cp('w2m2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2m3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
+
 📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-4',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2m3',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge btip">TIP</span><span class="card-title">Femi's Tip of the Day</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="tue-5">💡 Tuesday Tip from Coach Femi:
-"Do not underestimate the return of serve. Most recreational players just try to survive it. But the return is a weapon — get low, watch the ball toss, and decide early whether you are going crosscourt or down the line.
-If you take control of the return, you take control of the point before it even starts. Practice that mindset tonight. 🎾"
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2m4">💡 Monday Tip from Coach Femi:
+
+"Watch the ball all the way to your racket. It sounds simple but most players look up too early to see where the ball is going. Keep your eyes locked on the ball through contact — your body will take care of the rest.
+
+This week make that your one focus. You will be surprised how much cleaner your shots become. 🎾"
+
 — Femi, ACES Club</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-5',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2m4',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bchal">CHALLENGE</span><span class="card-title">Week 3 Challenge</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="tue-6">🎯 WEEK 3 ACES CHALLENGE — PLAY WITH SOMEONE NEW!
-This week's challenge is about community as much as tennis. Find someone in this group you have NEVER played with before and get a rally or a match in with them this week. 🎾
-It does not matter what level you are. That is the whole point — mix it up, learn something new, make a new connection within this family.
+    
+  </div>
+
+  <!-- TUESDAY -->
+  <div id="w2tue" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Tuesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Challenge</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2t1">🎾 Good morning ACES Family! Tuesday is here!
+
+Two days in and we are already building momentum. This is what consistency looks like — showing up when it is easy AND when it is not. That is the difference between good players and great ones.
+
+Lace up and let's get better today. 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w2t1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2t2">🎾 Tuesday session is ON! RSVP and let us know you're coming.
+
+📋 Daily RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
+Play time: 5:30 – 7:30 PM
+Every player matters — we want to see you out there! 💪</div>
+    <button class="copy-btn" onclick="cp('w2t2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2t3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
+This helps us get a headcount! @all
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (New — as needed basis)
+
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w2t3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2t4">💡 Tuesday Tip from Coach Femi:
+
+"Recovery is part of the game. After every shot get back to your base position — roughly center court. Most players hit a great shot and then stand and admire it. Your opponent doesn't care. Reset after every single ball.
+
+Make recovery a habit this week and watch how much less you get caught out of position. 🎾"
+
+— Femi, ACES Club</div>
+    <button class="copy-btn" onclick="cp('w2t4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Week 2 Challenge</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w2t5">🎯 WEEK 2 ACES CHALLENGE — DROP SHOT WARS!
+
+This week's challenge: successfully execute 5 drop shots in a single session that land in the service box and stay low. Get a partner to confirm it counts. 🎾
+
+It does not matter if you are a beginner or experienced — this one is for everyone. Drop shots require touch, feel and precision. Work on it this week!
+
 ✅ Complete it = 5 bonus ranking points
-📸 Post a photo with your new court partner here in the group!
-Who is taking this one on? Drop a 🙋 below! @all</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('tue-6',this)">Copy</button></div></div>
-</div>
+📸 Catch one on camera and post it here for the group!
 
-<!-- ═══ WEDNESDAY ═══ -->
-<div class="day-panel" id="panel-wednesday">
-  <div class="day-header"><div class="day-icon">🌤️</div><div class="day-info"><h2>Wednesday — Week 3</h2><p>Member spotlight day</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">10:00 AM — Tip</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">11:00 AM — Spotlight</div></div>
-  </div></div>
+Who is taking this challenge on? Drop a 🙋 below! @all</div>
+    <button class="copy-btn" onclick="cp('w2t5',this)">Copy</button></div>
+  </div>
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="wed-1">🌤️ Good morning ACES Family! Wednesday — we are right in the pocket!
-Midweek is a test. A lot of people tap out right here — they get tired, life gets busy and they start making excuses. Not this group. You keep showing up and that is what makes ACES different. 🙌
-Three weeks in and still growing. Let's finish the week stronger than we started it. 🎾💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-1',this)">Copy</button></div></div>
+  <!-- WEDNESDAY -->
+  <div id="w2wed" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Wednesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Spotlight</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2w1">🌤️ Good morning ACES Family! Midweek Wednesday — we are right in the thick of it!
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="wed-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-2',this)">Copy</button></div></div>
+Halfway through the week and still going strong. That is what separates this group from everyone else. No excuses, no skipping — just showing up and putting in the work together. 🙌
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Daily RSVP + Waiver</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="wed-3">🎾 Midweek session is on — RSVP and let us know you are in!
+Let's get out there and make today count! 🎾💚</div>
+    <button class="copy-btn" onclick="cp('w2w1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2w2">🎾 Halfway through the week — let's finish strong! RSVP so we know who's joining us today.
+
 📋 Daily RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
+
 Play time: 5:30 – 7:30 PM 💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-3',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2w2',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="wed-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2w3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
+
 📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-4',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2w3',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge btip">TIP</span><span class="card-title">Femi's Tip of the Day</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="wed-5">💡 Wednesday Tip from Coach Femi:
-"Talk to yourself on the court — out loud if you have to. Say 'stay low', 'watch the ball', 'get back'. It sounds silly but it keeps your mind focused on the right things instead of drifting to the score.
-The best players coach themselves in real time. Start doing it tonight and see the difference. 🎾"
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2w4">💡 Wednesday Tip from Coach Femi:
+
+"Breathe through your shots. Seriously. Hold your breath on contact and your muscles tighten up. Exhale as you strike the ball — it relaxes your arm, improves your timing and gives your shot more natural power.
+
+Try it today. It feels strange at first but once it clicks it changes everything. 🎾"
+
 — Femi, ACES Club</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-5',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2w4',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bspot">SPOTLIGHT</span><span class="card-title">Wednesday Member Spotlight</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="wed-6">⭐ ACES MEMBER SPOTLIGHT — [MEMBER NAME]
-Every week I take a moment to shine a light on someone in this family who truly gets what ACES is about. This week I could not stop thinking about [MEMBER NAME]. 💚
-[Write 2–3 sentences specific to this member — their consistency, how far they have come, the energy they bring, or a moment this week that stood out.]
-[MEMBER NAME] — what you bring to this group goes way beyond your game. You show up, you give effort and you make everyone around you better. That is everything. Keep going. 🎾
-ACES Family — drop some love below for [MEMBER NAME]! ⬇️
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Week 2 Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w2w5">⭐ ACES MEMBER SPOTLIGHT — [MEMBER NAME]
+
+Every week I want to take a moment to recognize someone in this family who truly embodies what ACES is built on — and this week that person is [MEMBER NAME]. 💚
+
+[Write 2-3 sentences specific to this member — their consistency, growth on the court, energy they bring, or something that stands out about them.]
+
+[MEMBER NAME] — I see you and I appreciate you more than you know. This club is better because you are in it. Keep showing up and keep being exactly who you are. 🎾
+
+ACES Family — show [MEMBER NAME] some love below! ⬇️
+
 — Femi</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('wed-6',this)">Copy</button></div></div>
-</div>
+    <button class="copy-btn" onclick="cp('w2w5',this)">Copy</button></div>
+  </div>
 
-<!-- ═══ THURSDAY ═══ -->
-<div class="day-panel" id="panel-thursday">
-  <div class="day-header"><div class="day-icon">🎓</div><div class="day-info"><h2>Thursday — Week 3</h2><p>Beginner Experience with Coach Austin tonight</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">9:30 AM — Beginner RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">10:00 AM — Tip</div></div>
-  </div></div>
+  <!-- THURSDAY -->
+  <div id="w2thu" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Thursday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>10:00 AM — Tip</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2th1">🎾 Good morning ACES Family! It's Thursday — one of our favorite days!
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="thu-1">🎾 Good morning ACES Family! Happy Thursday — one of the best days of the week!
-Tonight this family runs on two tracks at the same time. Our experienced players grind it out at Russett while our beginners put in serious work with Coach Austin at Montpelier.
-Two courts. One family. That is what makes us special. Let's make tonight count! 🔥💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-1',this)">Copy</button></div></div>
+Tonight we have something for EVERYONE. Experienced players bring the heat at Russett, and our beginners get their shine with Coach Austin at Montpelier. No matter where you are in your journey — there is a place for you in this family. 💚
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="thu-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-2',this)">Copy</button></div></div>
+That is what ACES is built on. Let's go! 🔥</div>
+    <button class="copy-btn" onclick="cp('w2th1',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Daily RSVP + Waiver</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="thu-3">🎾 It is Thursday — RSVP so we can plan for both sessions tonight!
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2th2">🎾 Playing today? RSVP so we can plan sessions for all levels!
+
 📋 Daily RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-Play time: 5:30 – 7:30 PM
-We want to see you out there tonight! 💪</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="thu-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+Play time: 5:30 – 7:30 PM
+We want to see you out there! 💪</div>
+    <button class="copy-btn" onclick="cp('w2th2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2th3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
-📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-4',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bbeg">BEGINNER</span><span class="card-title">Thursday Beginner RSVP + Waiver</span><span class="card-time">9:30 AM</span></div>
-  <div class="card-body" id="thu-5">🌟 Beginners — Week 3 Thursday is TONIGHT!
-Coach Austin will be at Montpelier Tennis Court (12771 Laurel-Bowie Rd) ready to go at 5:30 PM. 🎾
-Week 3 is where it starts to feel REAL. Your strokes are getting cleaner, your footwork is improving and your confidence is growing — even if you cannot see it yet. Trust the process. We see it. 💪
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w2th3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Thursday Beginner RSVP + Waiver</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w2th4">🌟 Beginners — Week 2 of your journey starts TONIGHT!
+
+Coach Austin is ready at Montpelier Tennis Court (12771 Laurel-Bowie Rd) — 5:30–7:30 PM.
+
+Week 2 is where things start to click. You have your footing, you know the vibe, now we build. Come ready to work and ready to have fun. Every session you show up for is an investment in yourself. 💪
+
 📋 RSVP for Beginner Session: https://posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30?t=series
 📝 Waiver (mandatory before stepping on court): https://aces-member-waiver.netlify.app/
-Do not miss tonight. This is your session — own it! 💚🎾</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-5',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge btip">TIP</span><span class="card-title">Femi's Tip of the Day</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="thu-6">💡 Thursday Tip from Coach Femi:
-"To our beginners in Week 3 — start thinking about WHERE you want the ball to go before you hit it. A lot of beginners just react. Great players are already deciding their next shot. Just get in the habit of having a plan.
-To our experienced players — play one set tonight like every point is match point. That competitive edge sharpens you more than any drill. 🎾"
+See you tonight! 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w2th4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2th5">💡 Thursday Tip from Coach Femi:
+
+"To our beginners in Week 2 — start paying attention to WHERE the ball bounces on your side. Is it landing short? Deep? Wide? Reading the ball early gives you more time to get into position.
+
+To our experienced players — simplify under pressure. When a point gets tough go back to basics. High percentage shots win more matches than risky ones. 🎾"
+
 — Femi, ACES Club</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('thu-6',this)">Copy</button></div></div>
-</div>
+    <button class="copy-btn" onclick="cp('w2th5',this)">Copy</button></div>
+  </div>
 
-<!-- ═══ FRIDAY ═══ -->
-<div class="day-panel" id="panel-friday">
-  <div class="day-header"><div class="day-icon">🎉</div><div class="day-info"><h2>Friday — Week 3</h2><p>Shot of the Week + Weekend Preview</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">10:00 AM — Tip</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">11:00 AM — Shot of Week</div></div>
-  </div></div>
+  <!-- FRIDAY -->
+  <div id="w2fri" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Friday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Shot of Week</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2f1">🎉 GOOD MORNING ACES FAMILY — IT'S FRIDAY WEEK 2!!
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="fri-1">🎉 GOOD MORNING ACES FAMILY — IT'S FRIDAY WEEK 3!!
-Three weeks of this and I am more inspired by this group than ever. You have built something real here — not just a WhatsApp group, not just a tennis club. An actual COMMUNITY that holds each other accountable and pushes each other forward.
-Tonight we finish the week strong and tomorrow we do it all over again. The weekend belongs to ACES! 🎾💚🔥</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-1',this)">Copy</button></div></div>
+Two weeks in and this group is showing out. The energy, the commitment, the growth — it is all right here. This is what we built ACES for.
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="fri-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-2',this)">Copy</button></div></div>
+Finish the week strong tonight and get ready — Saturday morning is going to be 🔥 The weekend belongs to us! 🎾💚</div>
+    <button class="copy-btn" onclick="cp('w2f1',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Friday RSVP + Weekend Preview</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="fri-3">🎾 Last one of the work week — finish strong! RSVP now!
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Friday RSVP + Weekend Preview</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2f2">🎾 Last session of the work week — let's make it count!
+
 📋 Today's RSVP: [YOUR POSH DAILY LINK]
 📅 Saturday Beginner RSVP: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-Tonight: 5:30 – 7:30 PM
-Tomorrow: Beginners 10:30 AM + General play till 1:30 PM
-Big weekend coming. Do not miss it! 💪🎾</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="fri-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+Tonight: 5:30 – 7:30 PM
+Tomorrow: Beginners 10:30 AM + General play till 1:30 PM 💪🎾</div>
+    <button class="copy-btn" onclick="cp('w2f2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2f3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
+
 📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-4',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2f3',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge btip">TIP</span><span class="card-title">Femi's Tip of the Day</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="fri-5">💡 Friday Tip from Coach Femi:
-"Going into the weekend — serve with more spin, not more power. A heavy topspin serve kicks high and uncomfortable for your opponent. It does not have to be fast to be dangerous.
-Work on your ball toss. The toss is 50% of your serve. Get it consistent and everything else becomes easier. Tonight is your last chance before the weekend — use it well. 🎾"
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2f4">💡 Friday Tip from Coach Femi:
+
+"End Week 2 with intention. Before tonight's session pick one thing you struggled with this week — one specific thing — and make that your focus for the next two hours. Targeted practice is the fastest way to improve.
+
+Walk off that court tonight knowing you got better. That is all that matters. 🎾"
+
 — Femi, ACES Club</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-5',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2f4',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bshot">📸 SHOT OF THE WEEK</span><span class="card-title">Week 3 Friday Feature</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="fri-6">📸 SHOT OF THE WEEK — WEEK 3 EDITION! 🎾🔥
-Three weeks of sessions means three weeks of incredible moments. Now it is time to show them off!
-Drop your best photo or video from this week — the cleanest stroke, the most competitive rally, the biggest smile on the court, or whatever moment made you say "I love this game." We want to see ALL of it! 😎
-🏆 The most 🔥 submission gets a Monday ranking shoutout AND 5 bonus points!
-Post your shot right here ⬇️ @all
-Let's see what Week 3 looked like ACES Family! 💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('fri-6',this)">Copy</button></div></div>
-</div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">📸 SHOT OF THE WEEK</span><span class="msg-label">Week 2 Friday Feature</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w2f5">📸 SHOT OF THE WEEK FRIDAY IS BACK! 🎾🔥
 
-<!-- ═══ SATURDAY ═══ -->
-<div class="day-panel" id="panel-saturday">
-  <div class="day-header"><div class="day-icon">☀️</div><div class="day-info"><h2>Saturday — Week 3</h2><p>Beginners 10:30 AM + General play till 1:30 PM</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">7:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">7:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">8:00 AM — RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">9:00 AM — Court Poll</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">5</div><div class="step-label">9:30 AM — Beginner RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">6</div><div class="step-label">11:00 AM — New Members</div></div>
-  </div></div>
+Week 2 has been REAL — now let us see the proof! Drop your best photo or video from this week's sessions right here.
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Morning Welcome</span><span class="card-time">7:00 AM</span></div>
-  <div class="card-body" id="sat-1">☀️ GOOD MORNING ACES FAMILY! Saturday Week 3 — let's get it! 🎾
-You want to know what I think about every Saturday morning? I think about how much this group has grown — not just in numbers but in skill, in character, in the way you treat each other on and off the court.
-That growth is no accident. It is what happens when you build the right community. And that is EXACTLY what we are doing here. Come out this morning and let's build together. 💚🔥</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-1',this)">Copy</button></div></div>
+Best serve, cleanest rally, best form, funniest moment — whatever captures your Week 2. We want to see it all! 😎
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">7:30 AM</span></div>
-  <div class="card-body" id="sat-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-2',this)">Copy</button></div></div>
+🏆 The most 🔥 shot gets a shoutout in Monday's ranking post AND 5 bonus ranking points!
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Saturday RSVP + Waiver</span><span class="card-time">8:00 AM</span></div>
-  <div class="card-body" id="sat-3">🎾 Saturday is HERE — RSVP and let us plan the best morning possible!
+Post your shot below ⬇️ @all
+
+Let's see Week 2 in pictures ACES Family! 💚</div>
+    <button class="copy-btn" onclick="cp('w2f5',this)">Copy</button></div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div id="w2sat" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Saturday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>11:00 AM — New Members</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w2s1">☀️ GOOD MORNING ACES FAMILY! Saturday Week 2 — let's get it! 🎾
+
+Two weeks in and this group keeps showing up. Saturday morning on the court with this family — there is honestly nothing like it.
+
+Let's make today one to remember. 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w2s1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Saturday RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w2s2">🎾 Who's coming out today? RSVP so we can prep the best experience for everyone!
+
 📋 Daily RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-⏰ General play: All morning till 1:30 PM
-We want to see EVERYONE on that court today! 🙌💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bpoll">POLL</span><span class="card-title">Court Location Poll</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="sat-4">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+⏰ General play: All day till 1:30 PM
+We want to see EVERYONE out here today! 🙌💚</div>
+    <button class="copy-btn" onclick="cp('w2s2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2s3">📍 It's a nice day to play today! Which courts will you be rallying on? 😎🎾
+
 This helps us get a headcount! @all
+
 1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
 3️⃣ Greenview Tennis Court (New — as needed basis)
-📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-4',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bbeg">BEGINNER</span><span class="card-title">Saturday Beginner RSVP + Waiver</span><span class="card-time">9:30 AM</span></div>
-  <div class="card-body" id="sat-5">🌟 Beginners — Saturday Week 3 is your morning!
-Coach Austin is at Montpelier Tennis Court (12771 Laurel-Bowie Rd) — session starts at 10:30 AM sharp. 🎾
-Three weeks in. Think about where you started. Think about where you are now. That gap — that growth — that is ALL you. Be proud of it and come finish strong this week! 💪
+📝 Waiver required: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w2s3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Saturday Beginner RSVP + Waiver</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w2s4">🌟 Beginners — Week 2 Saturday session is HERE!
+
+Coach Austin is ready at Montpelier Tennis Court (12771 Laurel-Bowie Rd) — 10:30 AM–12:30 PM.
+
+Week 2 Saturday is where the confidence really starts to build. Come ready to work and ready to have fun! 💪
+
 📋 RSVP for Saturday Beginners: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
 📝 Waiver (mandatory before stepping on court): https://aces-member-waiver.netlify.app/
+
 See you at 10:30! ☀️💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-5',this)">Copy</button></div></div>
+    <button class="copy-btn" onclick="cp('w2s4',this)">Copy</button></div>
 
-  <div class="card"><div class="card-head"><span class="badge bmem">NEW MEMBERS</span><span class="card-title">Week 3 New Member Welcome</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="sat-6">🎉 THE FAMILY KEEPS GROWING — WELCOME TO ACES! 🎾💚
-Every week new faces join this community and every week I am reminded of why we built this. Please give a huge welcome to our newest ACES Family members:
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Week 2 New Member Welcome</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w2s5">🎉 WELCOME TO THE ACES FAMILY — WEEK 2 NEW MEMBERS! 🎾💚
+
+The family keeps growing and we could not be more excited! Please give a massive welcome to our newest members:
+
 🆕 [New Member Name]
 🆕 [New Member Name]
 🆕 [New Member Name]
-You picked the right club and the right time. Three weeks in and the energy here is only going up. We cannot wait to see you grow with us — welcome home! 🎾
-To our OGs — make these newcomers feel that ACES warmth on the court this week. That is what this family is built on. 💚 @all</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sat-6',this)">Copy</button></div></div>
-</div>
 
-<!-- ═══ SUNDAY ═══ -->
-<div class="day-panel" id="panel-sunday">
-  <div class="day-header"><div class="day-icon">🙏</div><div class="day-info"><h2>Sunday — Week 3</h2><p>Rest, reflect, and preview Week 4</p></div></div>
-  <div class="send-order"><h3>Send in this order</h3><div class="order-steps">
-    <div class="order-step"><div class="step-num">1</div><div class="step-label">9:00 AM — Welcome</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">2</div><div class="step-label">9:30 AM — Mubadala</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">3</div><div class="step-label">10:00 AM — Casual RSVP</div></div><div class="sep">›</div>
-    <div class="order-step"><div class="step-num">4</div><div class="step-label">11:00 AM — Week 4 Preview</div></div>
-  </div></div>
+You chose the right club. We cannot wait to see you grow with us — welcome home! 🎾
 
-  <div class="card"><div class="card-head"><span class="badge bwelcome">WELCOME</span><span class="card-title">Sunday Welcome + Reflection</span><span class="card-time">9:00 AM</span></div>
-  <div class="card-body" id="sun-1">🙏 Good morning ACES Family! Happy Sunday — Week 3 is DONE!
-Take that in for a second. Three full weeks of showing up, putting in work, and showing this community what you are made of. That is not small. A lot of people say they want to get better at tennis. You are actually doing it. Week after week.
-Today rest. Recharge. Be proud. And get ready — because Week 4 is going to be the best one yet. 💚🎾</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sun-1',this)">Copy</button></div></div>
+ACES Family — show our newcomers some love on the court this week. That is the ACES way. 💚 @all</div>
+    <button class="copy-btn" onclick="cp('w2s5',this)">Copy</button></div>
+  </div>
 
-  <div class="card"><div class="card-head"><span class="badge bannounce">📣 ANNOUNCEMENT</span><span class="card-title">Mubadala Citi DC Open — Volunteer Invitation</span><span class="card-time">9:30 AM</span></div>
-  <div class="card-body" id="sun-2" data-mubadala="true"></div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sun-2',this)">Copy</button></div></div>
+  <!-- SUNDAY -->
+  <div id="w2sun" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Sunday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>9:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>10:00 AM — Casual RSVP</div><div class="order-step"><div class="order-num">3</div>11:00 AM — Week 3 Preview</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w2su1">🙏 Good morning ACES Family! Happy Sunday — Week 2 is done!
 
-  <div class="card"><div class="card-head"><span class="badge brsvp">RSVP</span><span class="card-title">Sunday Casual Play + Waiver</span><span class="card-time">10:00 AM</span></div>
-  <div class="card-body" id="sun-3">🎾 Sunday FREE FOR ALL — who is coming out for some casual tennis to close out Week 3?
-No pressure, no structure — just good vibes and good tennis with the ACES family. All levels, all welcome. 😎
-📋 Let us know you're coming: [YOUR POSH DAILY LINK]
+Two weeks in and look at this family. You showed up, you put in the work and you made each other better. Rest up, recharge and be proud of what you accomplished this week. Week 3 is going to be even better. 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w2su1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Sunday Casual Play + Waiver</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w2su2">🎾 Sunday FREE FOR ALL — who's coming out for casual play to close out Week 2?
+
+📋 Let us know: [YOUR POSH DAILY LINK]
 📝 Waiver (required before playing): https://aces-member-waiver.netlify.app/
-Drop a 🙋 if you are in! @all</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sun-3',this)">Copy</button></div></div>
 
-  <div class="card"><div class="card-head"><span class="badge bprev">PREVIEW</span><span class="card-title">Week 4 Preview + Rankings</span><span class="card-time">11:00 AM</span></div>
-  <div class="card-body" id="sun-4">📅 WEEK 4 IS COMING — lock it in your calendar right now! 🎾
+Drop a 🙋 if you're in! @all</div>
+    <button class="copy-btn" onclick="cp('w2su2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week 3 Preview</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w2su3">📅 WEEK 3 IS COMING — get it in your calendar! 🎾
+
 • Mon – Fri: General play 5:30 – 7:30 PM daily
-• Thu 5:30 PM: Beginner Experience Week 4 with Coach Austin @ Montpelier
-• Sat 10:30 AM: Saturday Beginner Experience Week 4 @ Montpelier
+• Thu 5:30 PM: Beginner Experience Week 3 with Coach Austin @ Montpelier
+• Sat 10:30 AM: Saturday Beginner Experience Week 3 with Coach Austin @ Montpelier
 • Sat till 1:30 PM: General play all levels
 
-📍 Courts:
-• Russett Tennis Courts, MD 20724 (Experienced)
-• Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
-• Greenview Tennis Court (as needed)
+🏆 Rankings update drops Monday morning — make sure you earned your points this week!
+📝 Haven't signed your waiver? Do it now: https://aces-member-waiver.netlify.app/
 
-🏆 This week's rankings leader: [MEMBER NAME] with [X] points
-📝 Waiver not done yet? Get it done now: https://aces-member-waiver.netlify.app/
+Week 3 — let's go even harder. 💪💚</div>
+    <button class="copy-btn" onclick="cp('w2su3',this)">Copy</button></div>
+  </div>
 
-Four weeks in — this is where real growth compounds. Let's make Week 4 the strongest one yet. 💪💚</div>
-  <div class="card-foot"><button class="copy-btn" onclick="copyMsg('sun-4',this)">Copy</button></div></div>
 </div>
 
-</main>
+
+<!-- ══════════════════════════════════════════════════ WEEK 3 -->
+<div id="week3" class="panel">
+  <div class="card" style="background:var(--green-dark);border:none;margin-bottom:20px">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">WEEK 3 — DAILY MESSAGES</div>
+    <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Select a day below. Copy and paste directly into WhatsApp.</div>
+  </div>
+  <div class="section-label">Select Day</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px">
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3mon',this)">Mon</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3tue',this)">Tue</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3wed',this)">Wed</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3thu',this)">Thu</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3fri',this)">Fri</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3sat',this)">Sat</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3sun',this)">Sun</button>
+  </div>
+
+  <!-- MONDAY -->
+  <div id="w3mon" class="w2day">
+    <div class="order-guide"><div class="order-guide-title">Monday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3m1">Good morning ACES fam! Week 3 is here 🎾
+
+I just want to say — watching this group show up week after week genuinely means a lot. You are not just playing tennis, you are building something. Keep that same energy going this week.
+
+Let's get it! 💚</div>
+    <button class="copy-btn" onclick="cp('w3m1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3m2">Who's out tonight? Drop your RSVP so we can get things set up before you arrive 🙌
+
+📋 RSVP here: [YOUR POSH DAILY LINK]
+📝 Waiver (sign before you play): https://aces-member-waiver.netlify.app/
+
+We go 5:30 – 7:30 PM. See you out there 💚</div>
+    <button class="copy-btn" onclick="cp('w3m2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3m3">Quick check — where are you playing today? Let us know so we can get a headcount sorted 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+Drop your number below 👇 @all
+
+📝 Don't forget your waiver: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3m3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3m4">💡 Week 3 tip —
+
+Something I have been noticing: a lot of players rush between shots. You hit the ball and immediately start thinking about the next one before it even lands.
+
+Slow down mentally. Hit, watch, react. That small pause will do more for your game than any drill this week. Trust me on this one 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3m4',this)">Copy</button></div>
+  </div>
+
+  <!-- TUESDAY -->
+  <div id="w3tue" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Tuesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Challenge</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3t1">Morning everyone! Happy Tuesday 🌤️
+
+Three weeks in and I am still seeing new faces joining and regulars getting sharper. That is exactly what this is supposed to look like. Keep showing up for yourselves — it matters more than you know.
+
+Tonight 5:30 PM. Let's work 🎾💚</div>
+    <button class="copy-btn" onclick="cp('w3t1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3t2">Are you coming out tonight? Let us know! Makes a big difference when we know who to expect 🙏
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM tonight 💪</div>
+    <button class="copy-btn" onclick="cp('w3t2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3t3">Where are you pulling up today? Drop a number 👇
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+@all — waiver link if you have not signed yet: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3t3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3t4">💡 Tuesday tip —
+
+Footwork before technique. Every time.
+
+I know it sounds boring but the reason most shots go wrong is not the swing — it is that your feet were not in the right place first. This week before every shot ask yourself: am I balanced? Am I set?
+
+Get your feet right and everything else gets easier 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3t4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Week 3 Challenge</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3t5">🎯 WEEK 3 CHALLENGE — The Consistency Rally
+
+Simple but tough: rally cross-court with a partner and keep it going for 10 shots in a row without the ball hitting the net or going out. Sounds easy. It is not 😅
+
+Both players have to be intentional. No speed, just control. Placement over power this week.
+
+✅ Complete it = 5 bonus ranking points
+📸 Film it and post it here — we want to see it!
+
+Who is in? Drop a 🙋 @all</div>
+    <button class="copy-btn" onclick="cp('w3t5',this)">Copy</button></div>
+  </div>
+
+  <!-- WEDNESDAY -->
+  <div id="w3wed" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Wednesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Spotlight</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3w1">Midweek check in! How is everyone feeling? 💚
+
+Wednesday is always a good reminder that you are more than halfway through the week. If Monday and Tuesday did not go the way you wanted — tonight is your reset. The court does not care what happened before. Just show up.
+
+See you at 5:30 🎾</div>
+    <button class="copy-btn" onclick="cp('w3w1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3w2">Midweek session tonight — who is coming? 🎾
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM. Come reset the week on the court 💚</div>
+    <button class="copy-btn" onclick="cp('w3w2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3w3">Where are you playing tonight? Help us plan 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+Reply with your number 👇 @all
+📝 Waiver: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3w3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3w4">💡 Wednesday tip —
+
+Do not try to be perfect. Seriously.
+
+Tennis is a game of managing errors, not eliminating them. Even the pros make mistakes — they just recover faster and move on quicker. The mental game is just as real as the physical one.
+
+Next time you miss a shot, take a breath, reset, and get to the next one. That is the skill. 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3w4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Week 3 Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3w5">⭐ ACES MEMBER SPOTLIGHT
+
+Every week I take a moment to recognize someone who is just doing the work quietly and showing up for the club. This week that person is [MEMBER NAME]. 💚
+
+[Write 2-3 sentences specific to this member — their growth on the court, consistency, energy they bring or something personal that stands out.]
+
+[MEMBER NAME] — this one is for you. Keep being exactly who you are. The court is better when you are on it 🎾
+
+Drop some love below for [MEMBER NAME] ⬇️ @all
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3w5',this)">Copy</button></div>
+  </div>
+
+  <!-- THURSDAY -->
+  <div id="w3thu" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Thursday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>10:00 AM — Tip</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3th1">It is Thursday and you already know what time it is 🎾💚
+
+One of my favorite days of the week because we get ALL levels on the court at the same time. Beginners putting in real work with Coach Austin. Experienced players going at it full pace. This is what a real tennis club looks like.
+
+Proud of every single one of you. See you tonight!</div>
+    <button class="copy-btn" onclick="cp('w3th1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3th2">Thursday is here — who is lacing up tonight? Let us know! 🙌
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM tonight 💪</div>
+    <button class="copy-btn" onclick="cp('w3th2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3th3">Where are you heading tonight? Drop a number so we can plan 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+@all 👇
+📝 Waiver: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3th3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Thursday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w3th4">Hey beginners — Week 3 Thursday is tonight and honestly this is where things start to really click 🎾
+
+Coach Austin is going to push you a little more this week and that is a good thing. Lean into it. You have already made it further than most people do.
+
+📋 RSVP for tonight: https://posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30?t=series
+📝 Waiver (must be signed): https://aces-member-waiver.netlify.app/
+
+Montpelier Tennis Court — 5:30 PM. See you there! 💚</div>
+    <button class="copy-btn" onclick="cp('w3th4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3th5">💡 Thursday tip —
+
+To the beginners: stop being afraid to miss. Seriously. Hit the ball like you mean it and see what happens. Being too careful actually makes you worse, not better. Commit to the shot.
+
+To the experienced players: if you are playing the same way you did two weeks ago, you are not growing. Find one thing to challenge yourself on tonight. Make it uncomfortable on purpose.
+
+Growth lives just outside your comfort zone. 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3th5',this)">Copy</button></div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div id="w3fri" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Friday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Shot of Week</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3f1">FRIDAYYY ACES!! 🎉🎾
+
+Week 3 has honestly been one to remember. The energy has been different — you can feel it. Tonight we close out the week strong and then Saturday we bring the real noise.
+
+Who is ready? Because I am 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w3f1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Friday RSVP + Weekend Preview</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3f2">Last one of the work week — let's go out strong 💪
+
+📋 Tonight's RSVP: [YOUR POSH DAILY LINK]
+📅 Saturday Beginners RSVP: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Tonight: 5:30 – 7:30 PM
+Tomorrow: Beginners 10:30 AM + open play till 1:30 PM 🎾</div>
+    <button class="copy-btn" onclick="cp('w3f2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3f3">Friday court check — where are you playing tonight? 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+Drop your number 👇 @all
+📝 Waiver: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3f3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3f4">💡 Friday tip — this one is short and real:
+
+Play to win, not to not lose. There is a big difference.
+
+Playing to not lose means you are safe all the time, you avoid risks, you stay in your comfort zone. Playing to win means you go for your shots when it matters. You take calculated risks. You trust yourself.
+
+Go out tonight and play to win. 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3f4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">📸 SHOT OF THE WEEK</span><span class="msg-label">Week 3 Friday Feature</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3f5">📸 SHOT OF THE WEEK — Week 3 Edition 🎾🔥
+
+Three weeks in and the footage is getting GOOD. Drop your best clip or photo from this week right here. Best shot, best rally, most improved moment, funniest thing that happened on court — all of it counts.
+
+🏆 Best submission gets shouted out in next Monday's post AND 5 bonus ranking points!
+
+Post below ⬇️ @all — let's see Week 3 💚</div>
+    <button class="copy-btn" onclick="cp('w3f5',this)">Copy</button></div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div id="w3sat" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Saturday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>11:00 AM — New Members</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3s1">SATURDAY ACES!! ☀️🎾
+
+There is genuinely nothing better than Saturday morning on the court with this group. The energy out here is different and you all are the reason why.
+
+Come as you are, bring your A game and let's make some memories today. See you soon! 💚</div>
+    <button class="copy-btn" onclick="cp('w3s1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Saturday RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3s2">Who is coming out today? Let us know — we want to see everyone! 🙌
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+General play runs all day till 1:30 PM 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w3s2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3s3">Where are you playing today? Help us coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 (Experienced)
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd (Beginner / Intermediate)
+3️⃣ Greenview Tennis Court (as needed)
+
+Drop your number 👇 @all
+📝 Waiver: https://aces-member-waiver.netlify.app/</div>
+    <button class="copy-btn" onclick="cp('w3s3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Saturday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w3s4">Beginners — Week 3 Saturday is your moment 🎾
+
+You have been building for two weeks. Today you are going to feel that. Coach Austin has something good planned and I think you are going to surprise yourselves.
+
+📋 RSVP for Saturday Beginners: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver (mandatory before court): https://aces-member-waiver.netlify.app/
+
+Montpelier Tennis Court — 10:30 AM. Do not be late! ☀️💚</div>
+    <button class="copy-btn" onclick="cp('w3s4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Week 3 New Member Welcome</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3s5">🎉 NEW FACES ALERT — welcome to the ACES family! 💚🎾
+
+We keep growing and I could not be more grateful. Please give a big warm welcome to our newest members joining us this week:
+
+🆕 [New Member Name]
+🆕 [New Member Name]
+🆕 [New Member Name]
+
+You joined at the right time. This community is something special and you are going to feel that the moment you step on the court.
+
+ACES fam — make sure our new people feel at home this weekend! That is who we are 💚
+
+@all</div>
+    <button class="copy-btn" onclick="cp('w3s5',this)">Copy</button></div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div id="w3sun" class="w2day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Sunday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>9:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>10:00 AM — Casual RSVP</div><div class="order-step"><div class="order-num">3</div>11:00 AM — Week 4 Preview</div></div></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3su1">Happy Sunday ACES family 🙏
+
+Week 3 is wrapped and honestly — you should be proud. Every week you keep showing up and the growth is real. Take a moment to acknowledge that today.
+
+Rest up, recharge and know that Week 4 is going to be even better. You have earned this rest. 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w3su1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Sunday Casual Play</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3su2">Anyone feeling like some casual Sunday tennis? Come out and play — no pressure, no structure, just good people and good tennis 🎾
+
+📋 Let us know you're coming: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Drop a 🙋 if you're in! @all</div>
+    <button class="copy-btn" onclick="cp('w3su2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week 4 Preview</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3su3">📅 Week 4 is loading — here is what is coming 🎾
+
+Mon – Fri: General play 5:30 – 7:30 PM every night
+Thu 5:30 PM: Beginner Experience Week 4 with Coach Austin @ Montpelier
+Sat 10:30 AM: Saturday Beginner Experience Week 4 with Coach Austin @ Montpelier
+Sat till 1:30 PM: Open play for all levels
+
+📍 Courts this week:
+• Russett Tennis Courts — Experienced players
+• Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+• Greenview Tennis Court — as needed
+
+📝 Waiver not signed yet? Do it now before Week 4: https://aces-member-waiver.netlify.app/
+
+Finishing strong ACES. See you Monday 💪💚</div>
+    <button class="copy-btn" onclick="cp('w3su3',this)">Copy</button></div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ WEEK 3 -->
+<div id="week3" class="panel">
+
+  <div class="card" style="background:var(--green-dark);border:none;margin-bottom:20px">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">WEEK 3 — DAILY MESSAGES</div>
+    <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Select a day below. Copy and paste directly into WhatsApp.</div>
+  </div>
+
+  <div class="section-label">Select Day</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px">
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3mon',this)">Mon</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3tue',this)">Tue</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3wed',this)">Wed</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3thu',this)">Thu</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3fri',this)">Fri</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3sat',this)">Sat</button>
+    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w3day('w3sun',this)">Sun</button>
+  </div>
+
+  <!-- MONDAY -->
+  <div id="w3mon" class="w3day">
+    <div class="order-guide"><div class="order-guide-title">Monday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3m1">Good morning ACES fam 🌅
+
+Week 3. We keep showing up. Honestly that alone puts us ahead of most people — the ones who say they want it but never actually move. You move. That matters. Let's have a good one today 💚🎾</div>
+    <button class="copy-btn" onclick="cp('w3m1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3m2">Who's out tonight? Drop your name so we can plan accordingly 👇
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver (sign before you step on court): https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM. Come through 🎾</div>
+    <button class="copy-btn" onclick="cp('w3m2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3m3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3m3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3m4">💡 Week 3 tip —
+
+Stop trying to hit winners every rally. I know it feels good but the best players in the world win on consistency not flashy shots. Make your opponent miss. Keep the ball in play. Be the most boring player on the court and watch what happens to your win rate 😅🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3m4',this)">Copy</button></div>
+  </div>
+
+  <!-- TUESDAY -->
+  <div id="w3tue" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Tuesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Challenge</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3t1">Happy Tuesday ACES 🎾
+
+Three weeks in. At this point the court is starting to feel like a second home. The people, the reps, the growth — it all adds up. Keep stacking days. See you out there 💚</div>
+    <button class="copy-btn" onclick="cp('w3t1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3t2">Tuesday session is live — are you in? 🙋
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM. Don't leave us out here without you 😂🎾</div>
+    <button class="copy-btn" onclick="cp('w3t2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3t3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3t3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3t4">💡 Real talk —
+
+Your non-dominant hand does more work than you think. If you play right-handed your left hand sets your racket back during prep, it guides your toss on the serve, it keeps your shoulders turning. Start paying attention to what your off hand is doing. It might be the thing that unlocks your next level 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3t4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Week 3 Challenge</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3t5">🎯 WEEK 3 CHALLENGE — SERVE IT UP!
+
+This week it's all about the serve. Your goal: land 10 serves in a row in the correct service box without a fault. Both sides count. Get someone to watch and confirm.
+
+Doesn't matter if you're a beginner or experienced — a reliable serve changes everything about how you play 💪
+
+✅ Complete it = 5 bonus ranking points
+📸 Film one of those serves and drop it in the chat — let's see the form!
+
+Who's taking this one? Drop a 🙋 @all</div>
+    <button class="copy-btn" onclick="cp('w3t5',this)">Copy</button></div>
+  </div>
+
+  <!-- WEDNESDAY -->
+  <div id="w3wed" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Wednesday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Spotlight</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3w1">Midweek check in 🎾
+
+Wednesday means we're right in the middle of it. Not the beginning hype, not the weekend energy — just the grind. And honestly? This is where character is built. Show up today because you said you would. That's it 💚</div>
+    <button class="copy-btn" onclick="cp('w3w1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3w2">Midweek session — let's get it 🙌
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM. See you out there 🎾</div>
+    <button class="copy-btn" onclick="cp('w3w2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3w3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3w3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3w4">💡 Something I notice a lot —
+
+People rush between points. Your opponent hits a winner, you immediately get ready to serve or return. Slow down. Take a breath. Bounce the ball a couple times. Reset your mind before the next point starts. Tennis is as much mental as it is physical and the players who manage their energy between points are always the ones still swinging strong in the third set 🧠🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3w4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Week 3 Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3w5">⭐ ACES SPOTLIGHT — [MEMBER NAME]
+
+Every week I like to take a moment and recognize someone who's been putting in real work on the court. This week that person is [MEMBER NAME].
+
+[Write 2-3 specific sentences about what you've noticed — their improvement, attitude, consistency, energy they bring to the group.]
+
+[MEMBER NAME] — genuinely appreciate you. Keep doing what you're doing. The court is better when you're on it 💚🎾
+
+Show some love below ⬇️
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3w5',this)">Copy</button></div>
+  </div>
+
+  <!-- THURSDAY -->
+  <div id="w3thu" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Thursday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>10:00 AM — Tip</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3th1">It's Thursday ACES 🎾
+
+Tonight we've got something for everyone. Beginners — Week 3 with Coach Austin is a big one. Things start clicking at Week 3. Experienced crew — you already know what time it is. Let's run it 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w3th1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3th2">Playing tonight? Let us know 👇
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+5:30 – 7:30 PM. All levels, all courts 🎾</div>
+    <button class="copy-btn" onclick="cp('w3th2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3th3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3th3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Thursday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w3th4">Beginners — Week 3 is tonight and I really want you there 🌟
+
+This is the week where a lot of things start to feel more natural. Your feet move better, you're reading the ball differently and it starts to feel less like work and more like actual tennis. Trust the process — Coach Austin's got you.
+
+📋 RSVP: https://posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30?t=series
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Montpelier Tennis Court, 12771 Laurel-Bowie Rd — 5:30 to 7:30 PM tonight 💚</div>
+    <button class="copy-btn" onclick="cp('w3th4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3th5">💡 For the beginners tonight —
+
+Don't overthink it. Your brain is going to want to analyze every single thing and that's actually what slows you down. Feel the shot first. Think after. The more you play the more your body starts to remember what to do — you just have to give it reps.
+
+For the experienced crew — pick one person tonight and really watch how they move. Not their shots, their footwork. You'll learn something 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3th5',this)">Copy</button></div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div id="w3fri" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Friday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM — Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM — Shot of the Week</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3f1">FRIDAY!! 🎉🎾
+
+You made it through Week 3. Not almost — all the way through. Go finish tonight strong and then get ready because Saturday morning is always something special. Proud of this group 💚</div>
+    <button class="copy-btn" onclick="cp('w3f1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Friday RSVP + Weekend Preview</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3f2">Last one of the work week — finish strong 💪
+
+📋 Tonight's RSVP: [YOUR POSH DAILY LINK]
+📅 Saturday Beginners: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Tonight: 5:30 – 7:30 PM
+Tomorrow: Beginners 10:30 AM then general play till 1:30 PM
+
+Big weekend 🎾</div>
+    <button class="copy-btn" onclick="cp('w3f2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3f3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3f3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi's Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3f4">💡 End of week reflection —
+
+Think about one shot that gave you trouble this week. Just one. Now go into tonight's session with the specific goal of working on that exact thing. Not everything — just that one thing. Focused reps beat random reps every single time. Walk off that court tonight knowing you got better at something specific 🎾
+
+— Femi</div>
+    <button class="copy-btn" onclick="cp('w3f4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">📸 SHOT OF THE WEEK</span><span class="msg-label">Week 3 Friday Feature</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3f5">📸 Friday — drop your best shot from Week 3!
+
+We want to see it. Best rally, cleanest serve, funniest moment — doesn't matter. If it happened on the court this week share it here 😎🎾
+
+🏆 Best one gets a shoutout in the Monday post AND 5 bonus ranking points!
+
+Post below ⬇️ @all
+
+Show us Week 3 💚</div>
+    <button class="copy-btn" onclick="cp('w3f5',this)">Copy</button></div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div id="w3sat" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Saturday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM — RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM — Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM — Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>11:00 AM — New Members</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w3s1">Saturday morning ACES fam ☀️🎾
+
+There's literally nowhere else I'd rather be than out on the court with this group on a Saturday morning. The energy you all bring is different. Let's make it a good one today 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w3s1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Saturday RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
+    <div class="msg-box" id="w3s2">Saturday is here — who's coming out? 🙌
+
+📋 RSVP: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+General play all day till 1:30 PM. Come for an hour, come for the whole thing — just come 🎾💚</div>
+    <button class="copy-btn" onclick="cp('w3s2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3s3">Where are you playing today? Let us know so we can coordinate 📍
+
+1️⃣ Russett Tennis Courts, Russett MD 20724 — Experienced players
+2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+3️⃣ Greenview Tennis Court — as needed
+
+Haven't signed your waiver yet? Do it now 👉 https://aces-member-waiver.netlify.app/ @all</div>
+    <button class="copy-btn" onclick="cp('w3s3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Saturday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
+    <div class="msg-box" id="w3s4">Beginners — Saturday Week 3 🌟
+
+You've been putting in work and it's showing. Today Coach Austin is going to push you a little further — in the best way. Come ready to sweat and ready to laugh because that's how we do it 😄🎾
+
+📋 RSVP: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Montpelier Tennis Court, 12771 Laurel-Bowie Rd — 10:30 AM to 12:30 PM ☀️</div>
+    <button class="copy-btn" onclick="cp('w3s4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Week 3 New Member Welcome</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3s5">🎉 New faces, new energy — welcome to the ACES family!
+
+We added some great people to this group this week and we want to make sure they feel at home. Please give a warm welcome to:
+
+🆕 [New Member Name]
+🆕 [New Member Name]
+🆕 [New Member Name]
+
+You joined the right club at the right time. Can't wait to see you grow with us 💚🎾
+
+ACES fam — make them feel welcome on the court this week. That's the culture we're building @all</div>
+    <button class="copy-btn" onclick="cp('w3s5',this)">Copy</button></div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div id="w3sun" class="w3day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Sunday — Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>9:00 AM — Welcome</div><div class="order-step"><div class="order-num">2</div>10:00 AM — Casual RSVP</div><div class="order-step"><div class="order-num">3</div>11:00 AM — Week 4 Preview</div></div></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w3su1">Good morning and happy Sunday ACES 🙏
+
+Week 3 is done. Three full weeks. I just want to say — I see every single one of you putting in the time and it means a lot. This club is growing into something real and it's because of this group 💚
+
+Rest up today. You earned it 🎾</div>
+    <button class="copy-btn" onclick="cp('w3su1',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Sunday Casual Play</span><span class="msg-time">10:00 AM</span></div>
+    <div class="msg-box" id="w3su2">Sunday casual — no pressure, just good tennis 🎾
+
+Who wants to come out and rally to close out Week 3?
+
+📋 Let us know: [YOUR POSH DAILY LINK]
+📝 Waiver: https://aces-member-waiver.netlify.app/
+
+Drop a 🙋 if you're in @all</div>
+    <button class="copy-btn" onclick="cp('w3su2',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week 4 Preview</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w3su3">📅 Week 4 coming up — get it in your calendar!
+
+Mon – Fri: 5:30 – 7:30 PM daily general play
+Thu 5:30 PM: Beginner Experience Week 4 with Coach Austin @ Montpelier
+Sat 10:30 AM: Saturday Beginners Week 4 @ Montpelier
+Sat all morning till 1:30 PM: General play all levels
+
+📍 Courts this week:
+• Russett Tennis Courts — Experienced players
+• Montpelier Tennis Court, 12771 Laurel-Bowie Rd — Beginners & Intermediate
+• Greenview — as needed
+
+📝 Waiver not signed yet? https://aces-member-waiver.netlify.app/
+
+Week 4 let's go even harder 💪💚</div>
+    <button class="copy-btn" onclick="cp('w3su3',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage" style="background:#FCEBEB;color:#791F1F">WEATHER</span><span class="msg-label">Rain Day Template — use anytime</span><span class="msg-time">As needed</span></div>
+    <div class="msg-box" id="w3su4">⛈️ Hey ACES fam — heads up
+
+Tonight's session at [COURT NAME] is cancelled due to [rain / weather]. Safety first always 🙏
+
+Stay dry out there. We'll be back on the court as soon as it clears up — keep an eye here for updates.
+
+Use the time to stretch, watch some tennis, rest those legs. The court will be waiting for us ☔💚</div>
+    <button class="copy-btn" onclick="cp('w3su4',this)">Copy</button></div>
+  </div>
+
+</div>
 
 <script>
-const MUBADALA = `🎾 ACES FAMILY — BIG ANNOUNCEMENT! 🎾
-
-I am so excited to share this with you all. ACES Club has been invited to volunteer at the Mubadala Citi DC Open this summer! This is a world-class professional ATP/WTA 500 tournament right in our own backyard — and they want US to be part of it. This is our moment to show up and represent! 💪
-
-⭐ CONFIRMED STARS THIS YEAR:
-Men: Taylor Fritz, Nick Kyrgios, Frances Tiafoe, Tommy Paul, Andrey Rublev
-Women: Jessica Pegula, Naomi Osaka, Elena Rybakina, Emma Raducanu, Venus Williams
-
-📅 VOLUNTEER DATES & TIMES:
-• Saturday, July 26 — 1:00 – 10:00 PM
-• July 27 – 31 — 6:30 – 10:00 PM
-• Friday, August 1 — 2:30 – 10:00 PM
-• Saturday, August 2 — 2:30 – 10:00 PM
-
-💡 MY RECOMMENDATION:
-Sign up as an Usher or Tournament Marshal — these roles get you the best court access and put you right in the middle of the action. There are other options too so pick what works for you.
-
-🎟️ AND HERE IS THE BEST PART:
-Every single volunteer gets FREE tournament tickets. You give your time and you get to watch world-class tennis in return. That is a win.
-
-As a nonprofit tennis club this is exactly the kind of moment we were built for — showing up, representing our community, and supporting the sport we love right in our own backyard. Let's pack those volunteer slots with ACES Family members and show out! 💚
-
-🔗 Sign up here: https://www.mubadalacitidcopen.com/en/event-info/volunteers
-
-Drop a ✅ below if you are signing up! @all
-— Femi`;
-
-document.querySelectorAll('[data-mubadala]').forEach(el => el.textContent = MUBADALA);
-
-function showDay(day, btn) {
-  document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
+function show(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('panel-' + day).classList.add('active');
+  document.getElementById(id).classList.add('active');
   btn.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
-
-function copyMsg(id, btn) {
+function cp(id, btn) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+    btn.textContent = 'Copied!';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('ok'); }, 2000);
   });
+
+function w2day(id, btn) {
+  document.querySelectorAll('.w2day').forEach(d => d.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+function w3day(id, btn) {
+  document.querySelectorAll('.w2day').forEach(d => d.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
 }
 </script>
 </body>
 </html>
+
