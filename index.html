@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACES Club — Week 4 Messages</title>
+<title>ACES Club — Week 5 Messages</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -18,6 +18,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--black)
 .b-poll{background:#faeeda;color:#633806}
 .b-begin{background:#e6f1fb;color:#0c447c}
 .b-engage{background:#eeedfe;color:#3c3489}
+.b-board{background:#0f2d18;color:#c9a84c}
+.b-calendar{background:#1a3a5c;color:#a8d4f5}
 .msg-wrap{background:white;border-radius:12px;border:0.5px solid var(--border);padding:16px;margin-bottom:12px}
 .msg-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .msg-label{font-size:13px;font-weight:600;color:var(--black)}
@@ -30,363 +32,497 @@ body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--black)
 .order-steps{display:flex;flex-wrap:wrap;gap:8px}
 .order-step{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.8)}
 .order-num{width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--green-dark);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.w4day{display:none}
-#w4mon{display:block}
+.w5day{display:none}
+#w5mon{display:block}
 </style>
 </head>
 <body>
 
 <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;max-width:760px;margin-left:auto;margin-right:auto">
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4mon',this)">Mon</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4tue',this)">Tue</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4wed',this)">Wed</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4thu',this)">Thu</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4fri',this)">Fri</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4sat',this)">Sat</button>
-  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4sun',this)">Sun</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5mon',this)">Mon</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5tue',this)">Tue</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5wed',this)">Wed</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5thu',this)">Thu</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5fri',this)">Fri</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5sat',this)">Sat</button>
+  <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w5day('w5sun',this)">Sun</button>
 </div>
 
-<!-- WEEK 4 -->
-<div id="week4" class="panel">
+<div id="week5" class="panel">
   <div class="card" style="background:var(--green-dark);border:none;margin-bottom:20px">
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">WEEK 4 - DAILY MESSAGES</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">WEEK 5 - DAILY MESSAGES</div>
     <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Select a day. Copy straight into WhatsApp.</div>
   </div>
-  <div class="section-label">Select Day</div>
-  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px">
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4mon',this)">Mon</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4tue',this)">Tue</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4wed',this)">Wed</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4thu',this)">Thu</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4fri',this)">Fri</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4sat',this)">Sat</button>
-    <button class="copy-btn" style="padding:8px 16px;font-size:12px" onclick="w4day('w4sun',this)">Sun</button>
-  </div>
 
-  <div id="w4mon" class="w4day">
-    <div class="order-guide"><div class="order-guide-title">Monday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div></div></div>
+  <!-- MONDAY -->
+  <div id="w5mon" class="w5day">
+    <div class="order-guide"><div class="order-guide-title">Monday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM - Leaderboard</div>
+      <div class="order-step"><div class="order-num">6</div>12:00 PM - Calendar</div>
+    </div></div>
+
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4m1">One whole month 🗓️🎾
+    <div class="msg-box" id="w5m1">Week 5 let's go!! 🎾
 
-I know we do not always stop to mark milestones but this one deserves a moment. Four weeks ago this group was just an idea. Now we have got people showing up multiple times a week, beginners hitting shots they could not dream of a month ago, and experienced players pushing each other harder than ever. That happened because of YOU. Every single person in this group. Now let us go make Month 2 even better 💚</div>
-    <button class="copy-btn" onclick="cp('w4m1',this)">Copy</button></div>
+Something hit me this morning. Nobody forced any of you to come back week after week. Nobody chased you down. You just keep showing up on your own because you want to be here. That is the kind of energy that builds something real. We are five weeks in and honestly this group has already become something I am proud of. Now let us go make Week 5 count 💚</div>
+    <button class="copy-btn" onclick="cp('w5m1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4m2">Who is out tonight? Drop your name so we know to expect you 👇
+    <div class="msg-box" id="w5m2">Week 5 Monday - who is showing up tonight? 👇
 
 📋 RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver (required before you step on court): https://aces-member-waiver.netlify.app/
 
-5:30 to 7:30 PM. Let us start Month 2 right 🎾</div>
-    <button class="copy-btn" onclick="cp('w4m2',this)">Copy</button></div>
+5:30 to 7:30 PM. Drop your name so we know to expect you 🎾</div>
+    <button class="copy-btn" onclick="cp('w5m2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4m3">Which court are you at tonight? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5m3">Which court are you at tonight? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4m3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5m3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4m4">Week 4 and this one is about your head not your hands 💡
+    <div class="msg-box" id="w5m4">Week 5 tip and this one is about something most people ignore completely 💡
 
-Where your eyes go your game goes. Most players look at the net when they miss. Look at where you WANT the ball to go instead. Pick a spot on the other side of the court before you swing then trust your body to hit it there. Sounds too simple to work but I promise you it changes everything about how you play under pressure.
+Your ready position between shots. After every single shot your racket should come back to the same neutral position in front of your body. Head up, weight on the balls of your feet, racket out in front. Most players let their racket drop after they hit and then scramble to recover for the next ball.
 
-Try it tonight. Pick your spot first 🎾
+Drill this tonight. Hit the shot, reset, hit the shot, reset. Do it enough times and it becomes automatic 🎾
 
 - Femi</div>
-    <button class="copy-btn" onclick="cp('w4m4',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5m4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-board">LEADERBOARD</span><span class="msg-label">Log Your Scores</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5m5">Big announcement ACES 🏆
+
+The ACES Club Live Leaderboard is officially up and running! Every singles and doubles match you play is now being tracked in real time. Wins, losses, sets, games, streaks - all of it.
+
+Here is what you need to do after every session:
+
+1. Play your match
+2. Log the score on the leaderboard 👉 [YOUR LEADERBOARD URL]
+3. Watch your ranking update live
+
+This is not just for fun. Tournament selection for the Owings Mills Ballers event will be based on your ranking so every match from this point forward counts.
+
+Go check where you stand right now and make sure your name is on there. If it is not drop a message here and we will get you added 📋
+
+Let us see who is running the board 👀🎾 @all</div>
+    <button class="copy-btn" onclick="cp('w5m5',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-calendar">CALENDAR</span><span class="msg-label">2026 Event Calendar</span><span class="msg-time">12:00 PM</span></div>
+    <div class="msg-box" id="w5m6">We have been building something this whole time and now it is time to show you where we are going 📅🎾
+
+Here is what the rest of 2026 looks like for ACES Club:
+
+MAY
+🎾 May 9 - Serve Day (Experienced members)
+🍖 May 23 - Memorial Day Cookout
+🏆 May 30 - Internal ACES Tournament
+
+JUNE
+👕 June 8 - Merch Distribution Day
+🆚 June - Owings Mills Ballers Tournament
+🎓 June - Beginner Graduation + Cookout
+
+JULY
+🏠 July - Open House (Mid Summer)
+🎉 July 4th Weekend - Summer Social
+🏆 July 26 - Internal Tournament
+
+AUGUST
+🎓 Aug - Back to School Drive
+🎾 Aug 13-17 - DC Open (Group Outing)
+🏆 Aug 30 - Internal Tournament
+
+SEPTEMBER
+🏆 Sept 27 - Internal Tournament
+🥇 Sept - Singles Ranking Tournament
+❤️ Sept - Member Appreciation Day
+
+OCTOBER
+🎃 Oct - Halloween Tennis Social
+
+NOVEMBER
+🤝 Nov - Community Service Day
+🦃 Nov - Friendsgiving
+
+DECEMBER
+🎊 Dec - Year End Gala (Ticketed Fundraiser)
+
+Save this. More details on each event coming soon. This is going to be a year to remember 💚🎾 @all</div>
+    <button class="copy-btn" onclick="cp('w5m6',this)">Copy</button></div>
   </div>
 
-  <div id="w4tue" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Tuesday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM - Challenge</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4t1">You know what is wild 👀
+  <!-- TUESDAY -->
+  <div id="w5tue" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Tuesday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM - Challenge</div>
+    </div></div>
 
-I was looking back at some of the early session photos from Week 1 and comparing them to how people are moving on the court now. The difference is genuinely crazy. Your feet are better. Your swings are cleaner. Your confidence is different. And the thing is you probably cannot even see it yourself yet because you are in it every day. Trust me it is there. Keep going 💚🎾</div>
-    <button class="copy-btn" onclick="cp('w4t1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w5t1">Tuesday check in 👋🎾
+
+Can I be honest for a second? When I first started planning ACES I had no idea if people would actually show up consistently. Five weeks later and this group keeps proving me wrong in the best possible way. The Tuesday crew especially - y'all do not play about showing up on a weeknight and I see that 💚
+
+Let us get after it today.</div>
+    <button class="copy-btn" onclick="cp('w5t1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4t2">Tuesday is not a day off in this family 😤🎾
-
-You in tonight?
+    <div class="msg-box" id="w5t2">Tuesday session is live - you coming? 🙋🎾
 
 📋 RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
-5:30 to 7:30 PM. See you out there 💪</div>
-    <button class="copy-btn" onclick="cp('w4t2',this)">Copy</button></div>
+5:30 to 7:30 PM. Do not leave us hanging out there 😂</div>
+    <button class="copy-btn" onclick="cp('w5t2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4t3">Which court are you at tonight? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5t3">Which court are you at tonight? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4t3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5t3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4t4">Let us talk about the return of serve 💡
+    <div class="msg-box" id="w5t4">This one is going to sound counterintuitive 💡
 
-Most people just react when the ball comes at them. Instead try this: before the point starts decide if you are going to go crosscourt or down the line. Make the decision BEFORE the serve happens. Then commit to it. You do not have to be right every time but having a plan makes your return cleaner and your brain calmer.
+Slow down your backswing. I know everyone wants to hit hard but most power in tennis does not come from swinging fast. It comes from the coil and uncoil of your body rotating through the shot. If you are rushing your backswing you are actually cutting your power off before it starts.
 
-Stop reacting. Start deciding 🎾
+Take the racket back slowly and deliberately. Then accelerate through contact. The difference in pace on the ball will surprise you 🎾
 
 - Femi</div>
-    <button class="copy-btn" onclick="cp('w4t4',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5t4',this)">Copy</button></div>
 
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Week 4 Challenge</span><span class="msg-time">11:00 AM</span></div>
-    <div class="msg-box" id="w4t5">🎯 WEEK 4 CHALLENGE - RALLY KING
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">CHALLENGE</span><span class="msg-label">Week 5 Challenge</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5t5">🎯 WEEK 5 CHALLENGE - SERVE AND STAY
 
-Find a partner and rally crosscourt keeping it going for 20 shots in a row without hitting the net or going out. No going for winners. No smashing. Just clean controlled consistent tennis 🎾
+This week is about your movement after the serve. Most players hit a serve and just stand there watching what happens. This week every time you serve you must immediately split step and be ready to move before the return comes back.
 
-Both of you have to be locked in for it to count. This is one of the most underrated skills in the game and most people skip it.
+Your goal: play 3 full service games where you split step after EVERY single serve. Have a partner watch and call you out if you freeze.
+
+Good serving plus good recovery is what separates casual players from competitive ones 🎾
 
 ✅ Complete it = 5 bonus ranking points
-📸 Film your 20th shot and drop it in the chat!
+📸 Film one of your recovery split steps and post it here!
 
-Drop a 🙋 if you are taking this on @all</div>
-    <button class="copy-btn" onclick="cp('w4t5',this)">Copy</button></div>
+Who is in? Drop a 🙋 @all</div>
+    <button class="copy-btn" onclick="cp('w5t5',this)">Copy</button></div>
   </div>
 
-  <div id="w4wed" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Wednesday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM - Spotlight</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4w1">Real talk for a second 💬
+  <!-- WEDNESDAY -->
+  <div id="w5wed" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Wednesday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM - Spotlight</div>
+    </div></div>
 
-Building a tennis club from scratch is not easy. Keeping people engaged week after week is not easy. But you know what makes it feel effortless? This group. The way you show up for each other, encourage each other, push each other without anyone asking you to. That culture is rare and I do not take it for granted. Thank you for making ACES what it is. Now let us go play some tennis 🎾💚</div>
-    <button class="copy-btn" onclick="cp('w4w1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w5w1">Midweek and we are still moving 🎾💚
+
+You know what I want you to try today? Before you even pick up your racket tonight take 60 seconds and think about one specific thing you want to work on. Not everything. Just one thing. Go into the session with a purpose and I guarantee you will get more out of those two hours than you have in a while.
+
+Intentional practice beats going through the motions every single time. See you out there.</div>
+    <button class="copy-btn" onclick="cp('w5w1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4w2">Midweek grind 🙌 Are you in tonight?
+    <div class="msg-box" id="w5w2">Hump day tennis 🎾 Are you in tonight?
 
 📋 RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
-5:30 to 7:30 PM. Let us keep the momentum going 🎾</div>
-    <button class="copy-btn" onclick="cp('w4w2',this)">Copy</button></div>
+5:30 to 7:30 PM. Midweek grind 💪</div>
+    <button class="copy-btn" onclick="cp('w5w2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4w3">Which court are you at tonight? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5w3">Which court are you at tonight? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4w3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5w3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4w4">Something nobody talks about enough 💡
+    <div class="msg-box" id="w5w4">Wednesday tip - this one is mental 💡
 
-The tension in your racket affects everything about how your ball behaves. Loose strings give you more power and spin but less control. Tight strings give you more control but less pop. If you have been playing with the same strings for over a year they are probably dead and you are basically playing with a wet blanket.
+Stop replaying the last point while the next one is being set up. I watch players walk to the baseline after losing a point still shaking their head or muttering under their breath and then they walk right into the next point distracted. That is how you lose runs of 4 or 5 points in a row without even realizing what happened.
 
-Get your racket restrung. It is one of the cheapest upgrades you can make and the difference will shock you. Ask me tonight and I will point you in the right direction 🎾
-
-- Femi</div>
-    <button class="copy-btn" onclick="cp('w4w4',this)">Copy</button></div>
-
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Week 4 Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
-    <div class="msg-box" id="w4w5">Week 4 Spotlight ⭐
-
-Every week I pick one person who has been putting in work that deserves to be seen. This week it is [MEMBER NAME].
-
-[Write 2-3 sentences specific to this person - what you have noticed about their game, their attitude, their improvement, the energy they bring to the group.]
-
-[MEMBER NAME] you are exactly the kind of person this club was built for. Keep being you 💚🎾
-
-Drop some love below ⬇️ @all
+Lose the point. Accept it. Bounce the ball twice. Reset. Every point is a clean slate. The players who do this consistently are the ones who are always competitive regardless of the score 🎾
 
 - Femi</div>
-    <button class="copy-btn" onclick="cp('w4w5',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5w4',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SPOTLIGHT</span><span class="msg-label">Week 5 Member Spotlight</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5w5">Week 5 Spotlight and this one is personal ⭐
+
+Every week I try to recognize someone who has been putting in the work quietly. No flash. No fuss. Just showing up and getting better. This week that person is [MEMBER NAME].
+
+[Write 2-3 sentences about what you have specifically noticed about this person this week - their improvement, consistency, attitude on the court, how they treat other members.]
+
+[MEMBER NAME] this group is better because you are in it. Keep doing what you are doing 💚🎾
+
+Show them some love below ⬇️ @all
+
+- Femi</div>
+    <button class="copy-btn" onclick="cp('w5w5',this)">Copy</button></div>
   </div>
 
-  <div id="w4thu" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Thursday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM - Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>10:00 AM - Tip</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4th1">Thursday 🎾
+  <!-- THURSDAY -->
+  <div id="w5thu" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Thursday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>9:30 AM - Beginner RSVP</div>
+      <div class="order-step"><div class="order-num">5</div>10:00 AM - Tip</div>
+      <div class="order-step"><div class="order-num">6</div>11:00 AM - Leaderboard Reminder</div>
+    </div></div>
 
-Quick reminder that every rep you put in on this court is building something. You might not feel it session to session but your nervous system is rewiring itself every time you play. Every shot you hit correctly is teaching your muscles what right feels like. So even on days where nothing seems to be clicking you are still building. Show up tonight 💚</div>
-    <button class="copy-btn" onclick="cp('w4th1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w5th1">Thursday already and I am not complaining 🎾
+
+Beginners - five weeks in and I just want to say something real. The growth I have seen from this group over the past month is not small. Some of you came in Week 1 not knowing how to hold a racket properly. Now you are out here playing games. That is not nothing. That is everything. Keep it going tonight 💚
+
+Experienced crew - let us push each other. No coasting on Thursdays 💪🔥</div>
+    <button class="copy-btn" onclick="cp('w5th1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Daily RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4th2">Thursday night tennis 🎾 Who is in?
+    <div class="msg-box" id="w5th2">Thursday night is always a good time 🎾 Who is coming out?
 
 📋 RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
 5:30 to 7:30 PM. Let us know you are coming 👇</div>
-    <button class="copy-btn" onclick="cp('w4th2',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5th2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4th3">Which court are you at tonight? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5th3">Which court are you at tonight? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4th3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5th3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Thursday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
-    <div class="msg-box" id="w4th4">Beginners - Week 4 tonight and this one is special 🌟
+    <div class="msg-box" id="w5th4">Beginners - Week 5 is tonight 🌟
 
-You are at the halfway point of the program. Four weeks ago most of you had no idea what you were doing on a tennis court and now you are out here rallying, serving, keeping score. The progress is real even if it does not always feel like it from the inside.
+You have crossed the halfway mark of the program. Week 5 means you are now in the second half and things are going to start clicking even faster from here. Your muscle memory is building, your court awareness is developing and you are starting to think like a tennis player not just react like one.
 
-Coach Austin has something good planned for tonight. Come ready to work.
+Coach Austin has something great lined up. Come ready.
 
 📋 RSVP: https://posh.vip/e/aces-club-beginners-experience-2026-4-9-23-30?t=series
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
-Montpelier Tennis Court, 12771 Laurel-Bowie Rd - 5:30 to 7:30 PM tonight 💚</div>
-    <button class="copy-btn" onclick="cp('w4th4',this)">Copy</button></div>
+Montpelier Tennis Court, 12771 Laurel-Bowie Rd - 5:30 to 7:30 PM 💚</div>
+    <button class="copy-btn" onclick="cp('w5th4',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4th5">Thursday tip and this one is for everybody 💡
+    <div class="msg-box" id="w5th5">Quick one for tonight 💡
 
-Stop apologizing when you win a point. I see it all the time. Someone hits a great shot, the ball clips the tape and falls over, and the person who hit it goes "oh sorry that was lucky." No. You hit the shot. Own it. Apologizing for winning trains your brain to feel bad about succeeding.
+Watch where your opponent stands before they serve. Most players have a pattern. They stand in the same spot and serve to the same place almost every time. If you can pick up on that pattern even once in a match it gives you a massive advantage on the return.
 
-Compete with kindness but compete to win. There is nothing wrong with that 🎾
+Start paying attention tonight. Not just to the ball but to your opponent. Tennis is chess as much as it is athletics 🎾
 
 - Femi</div>
-    <button class="copy-btn" onclick="cp('w4th5',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5th5',this)">Copy</button></div>
+
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-board">LEADERBOARD</span><span class="msg-label">Score Log Reminder</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5th6">Reminder to log your scores from tonight 🏆
+
+After every match tonight please take 2 minutes and log your result on the ACES leaderboard 👉 [YOUR LEADERBOARD URL]
+
+Singles or doubles - it all counts. Your ranking is building in real time and tournament selection for the Owings Mills event will pull directly from this.
+
+If you are not on the leaderboard yet drop your name here and I will get you added before tonight's session starts 📋
+
+Let us see some movement on that board this week 👀🎾 @all</div>
+    <button class="copy-btn" onclick="cp('w5th6',this)">Copy</button></div>
   </div>
 
-  <div id="w4fri" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Friday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div><div class="order-step"><div class="order-num">5</div>11:00 AM - Shot of the Week</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4f1">Four weeks and we are still here 🙌🎾
+  <!-- FRIDAY -->
+  <div id="w5fri" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Friday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>10:00 AM - Tip</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM - Shot of the Week</div>
+    </div></div>
 
-You know most people who start something new quit before week 4. That is just facts. The fact that this group is still growing, still showing up, still locked in tells me everything I need to know about who we are. Go finish this week with the same energy you started it. I will see you tonight 💚</div>
-    <button class="copy-btn" onclick="cp('w4f1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w5f1">FRIDAY WEEK 5!! 🎉🎾
+
+You made it to another Friday and this one hits different because we also dropped the event calendar this week. Look at what is coming. Tournaments. Cookouts. Graduation. Gala. A real season. You are not just showing up to play tennis anymore. You are part of something that has a whole year mapped out.
+
+Finish tonight strong. Saturday morning is always worth it 💚🔥</div>
+    <button class="copy-btn" onclick="cp('w5f1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Friday RSVP + Weekend Preview</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4f2">Last session of the work week - let us close it out strong 💪
+    <div class="msg-box" id="w5f2">Last work week session - let us finish strong 💪
 
 📋 Tonight: [YOUR POSH DAILY LINK]
 📅 Saturday Beginners: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
 Tonight 5:30 to 7:30 PM
-Tomorrow Beginners 10:30 AM then general play till 1:30 PM 🎾</div>
-    <button class="copy-btn" onclick="cp('w4f2',this)">Copy</button></div>
+Tomorrow Beginners 10:30 AM then general play till 1:30 PM
+
+Big weekend 🎾</div>
+    <button class="copy-btn" onclick="cp('w5f2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4f3">Which court are you at tonight? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5f3">Which court are you at tonight? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4f3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5f3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">TIP</span><span class="msg-label">Femi Tip of the Day</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4f4">End of week thought 💡
+    <div class="msg-box" id="w5f4">End of week thought 💡
 
-After tonight I want you to think about this: what shot did you avoid this week? Not the ones you missed. The ones you deliberately did not go for because you were not confident in them. That shot is your homework for next week. The only way to build trust in a shot is to actually hit it. Even if it costs you the point in practice.
+I want you to try something different tonight. Pick one player on the court and genuinely encourage them out loud during the session. Not fake hype. Real encouragement when you see them do something well.
 
-Growth lives in the shots you are afraid to take 🎾
+The culture of a team is built in the small moments. When people feel seen and appreciated they play better, they show up more and they bring other people in. ACES is growing because this group has good energy. Let us keep feeding that 💚🎾
 
 - Femi</div>
-    <button class="copy-btn" onclick="cp('w4f4',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5f4',this)">Copy</button></div>
 
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SHOT OF THE WEEK</span><span class="msg-label">Week 4 Friday Feature</span><span class="msg-time">11:00 AM</span></div>
-    <div class="msg-box" id="w4f5">📸 One month of ACES - show us the best of Week 4!
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">SHOT OF THE WEEK</span><span class="msg-label">Week 5 Friday Feature</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5f5">📸 Week 5 - drop your best moment!
 
-Drop your clip right here. Best rally, most improved moment, shot that finally clicked - we want to see all of it 😄🎾
+Best shot, best rally, funniest thing that happened on the court this week - post it right here 😄🎾
 
-🏆 Best one gets a Monday shoutout AND 5 bonus ranking points
+Did you log a W on the leaderboard this week? Drop a screenshot of your ranking too - let us see who is climbing 👀
+
+🏆 Best clip gets a Monday shoutout AND 5 bonus ranking points
 
 Post below ⬇️ @all
 
-One month strong. Let us see it 💚</div>
-    <button class="copy-btn" onclick="cp('w4f5',this)">Copy</button></div>
+Week 5 - let us see it 💚</div>
+    <button class="copy-btn" onclick="cp('w5f5',this)">Copy</button></div>
   </div>
 
-  <div id="w4sat" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Saturday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div><div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div><div class="order-step"><div class="order-num">4</div>9:30 AM - Beginner RSVP</div><div class="order-step"><div class="order-num">5</div>11:00 AM - New Members</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
-    <div class="msg-box" id="w4s1">Good morning from the court ☀️🎾
+  <!-- SATURDAY -->
+  <div id="w5sat" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Saturday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>7:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>8:00 AM - RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>9:00 AM - Court Poll</div>
+      <div class="order-step"><div class="order-num">4</div>9:30 AM - Beginner RSVP</div>
+      <div class="order-step"><div class="order-num">5</div>11:00 AM - New Members</div>
+    </div></div>
 
-You know what I noticed this week? The laughs are getting louder. The conversations between points are getting more comfortable. The group is gelling. That is not something you can manufacture - it just happens when real people keep showing up for each other. That is ACES. Let us have a great Saturday 💚</div>
-    <button class="copy-btn" onclick="cp('w4s1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Morning Welcome</span><span class="msg-time">7:00 AM</span></div>
+    <div class="msg-box" id="w5s1">Saturday morning ACES!! ☀️🎾
+
+Real talk - Saturday sessions are my favorite. The energy is just different. No rush, no work stress, just people who want to be on a tennis court. There is nowhere else I would rather be on a Saturday morning than right here with this group.
+
+Let us make today great 💚</div>
+    <button class="copy-btn" onclick="cp('w5s1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Saturday RSVP + Waiver</span><span class="msg-time">8:00 AM</span></div>
-    <div class="msg-box" id="w4s2">Saturday is here - are you coming out? 🙌
+    <div class="msg-box" id="w5s2">Saturday is here - who is coming out? 🙌
 
 📋 RSVP: [YOUR POSH DAILY LINK]
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
-General play all morning till 1:30 PM. Come for whatever you have time for 🎾💚</div>
-    <button class="copy-btn" onclick="cp('w4s2',this)">Copy</button></div>
+General play all morning till 1:30 PM. Come for an hour, stay all morning - just show up 🎾💚</div>
+    <button class="copy-btn" onclick="cp('w5s2',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">POLL</span><span class="msg-label">Court Location Poll</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4s3">Which court are you at today? React or reply so we can coordinate 📍
+    <div class="msg-box" id="w5s3">Which court are you at today? React or reply so we can coordinate 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724 - Experienced players
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 3️⃣ Greenview Tennis Court - as needed
 
 Waiver not signed yet? Two minutes right here 👉 https://aces-member-waiver.netlify.app/ @all</div>
-    <button class="copy-btn" onclick="cp('w4s3',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5s3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-begin">BEGINNER</span><span class="msg-label">Saturday Beginner RSVP</span><span class="msg-time">9:30 AM</span></div>
-    <div class="msg-box" id="w4s4">Saturday Beginners - Week 4 is here 🌟
+    <div class="msg-box" id="w5s4">Saturday Beginners - Week 5 let us go 🌟
 
-You have done 4 weeks now. Think about how uncomfortable Week 1 felt and compare it to how you feel walking onto the court today. That shift is growth. And you are only halfway through. Coach Austin is going to push the group a little further today because you are ready for it.
+Five weeks in and I want you to pay attention to something today. Watch how naturally you move around the court compared to Week 1. Watch how you track the ball before it arrives. That is not luck. That is five weeks of showing up and doing the work.
+
+Coach Austin has a great session lined up. Come ready to be pushed a little 😄🎾
 
 📋 RSVP: https://posh.vip/e/aces-beginner-experience-2026-4-11-16-30?t=series
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
 Montpelier Tennis Court, 12771 Laurel-Bowie Rd - 10:30 AM to 12:30 PM ☀️</div>
-    <button class="copy-btn" onclick="cp('w4s4',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5s4',this)">Copy</button></div>
 
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Week 4 New Member Welcome</span><span class="msg-time">11:00 AM</span></div>
-    <div class="msg-box" id="w4s5">New people alert 🎉🎾
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">NEW MEMBERS</span><span class="msg-label">Week 5 New Member Welcome</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5s5">New faces this week and we love it 🎉🎾
 
-The family keeps getting bigger and honestly that never gets old. Please welcome our newest members joining us this week:
+Please give a big ACES welcome to our newest family members:
 
 🆕 [New Member Name]
 🆕 [New Member Name]
 🆕 [New Member Name]
 
-You are stepping into something really special. This group will make you better on and off the court. Welcome home 💚
+You picked the right time to join. We have got a full season of events, a live leaderboard, tournaments and so much more coming up. You are stepping into something special.
 
-ACES fam - show them some love this week and make them feel part of the family from day one. That is the culture @all</div>
-    <button class="copy-btn" onclick="cp('w4s5',this)">Copy</button></div>
+ACES fam - make them feel at home on and off the court this week. That is the culture we have built @all 💚</div>
+    <button class="copy-btn" onclick="cp('w5s5',this)">Copy</button></div>
   </div>
 
-  <div id="w4sun" class="w4day" style="display:none">
-    <div class="order-guide"><div class="order-guide-title">Sunday - Send in this order</div><div class="order-steps"><div class="order-step"><div class="order-num">1</div>9:00 AM - Welcome</div><div class="order-step"><div class="order-num">2</div>10:00 AM - Casual RSVP</div><div class="order-step"><div class="order-num">3</div>11:00 AM - Week 5 Preview</div></div></div>
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome</span><span class="msg-time">9:00 AM</span></div>
-    <div class="msg-box" id="w4su1">Rest day but I still wanted to check in 🙏
+  <!-- SUNDAY -->
+  <div id="w5sun" class="w5day" style="display:none">
+    <div class="order-guide"><div class="order-guide-title">Sunday - Send in this order</div><div class="order-steps">
+      <div class="order-step"><div class="order-num">1</div>9:00 AM - Welcome</div>
+      <div class="order-step"><div class="order-num">2</div>10:00 AM - Casual RSVP</div>
+      <div class="order-step"><div class="order-num">3</div>11:00 AM - Week 6 Preview</div>
+    </div></div>
 
-Week 4 complete. One full month of ACES Club. I started this thing because I believed in what tennis could do for a community and you all have proved that belief right every single week. Take today to recover. Eat good food. Drink your water. We go again Monday and Month 2 is going to be something else 💚🎾</div>
-    <button class="copy-btn" onclick="cp('w4su1',this)">Copy</button></div>
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Welcome</span><span class="msg-time">9:00 AM</span></div>
+    <div class="msg-box" id="w5su1">Happy Sunday ACES 🙏🎾
+
+Five weeks done. Take a second today to appreciate that. You made a commitment to yourself and this group five weeks ago and you have backed it up. Rest today. Do something good for your body and your mind. Week 6 starts tomorrow and we are going to need that energy 💚</div>
+    <button class="copy-btn" onclick="cp('w5su1',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-rsvp">RSVP</span><span class="msg-label">Sunday Casual Play</span><span class="msg-time">10:00 AM</span></div>
-    <div class="msg-box" id="w4su2">If you cannot stay off the court on a Sunday you belong in this club 😂🎾
+    <div class="msg-box" id="w5su2">Can't stop won't stop - Sunday casual anyone? 😄🎾
 
-Casual play - no pressure, no structure, just vibes and tennis.
+No pressure, no structure. Just come out and hit some balls with good people.
 
 📋 Let us know: [YOUR POSH DAILY LINK]
 📝 Waiver: https://aces-member-waiver.netlify.app/
 
 Drop a 🙋 if you are in @all</div>
-    <button class="copy-btn" onclick="cp('w4su2',this)">Copy</button></div>
+    <button class="copy-btn" onclick="cp('w5su2',this)">Copy</button></div>
 
-    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week 5 Preview</span><span class="msg-time">11:00 AM</span></div>
-    <div class="msg-box" id="w4su3">Week 5 loading - get it in the calendar now 📅
+    <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage">PREVIEW</span><span class="msg-label">Week 6 Preview</span><span class="msg-time">11:00 AM</span></div>
+    <div class="msg-box" id="w5su3">Week 6 coming up - add it to the calendar 📅
 
 Mon to Fri: General play 5:30 to 7:30 PM
-Thu 5:30 PM: Beginner Experience Week 5 with Coach Austin at Montpelier
-Sat 10:30 AM: Saturday Beginners Week 5 at Montpelier
+Thu 5:30 PM: Beginner Experience Week 6 with Coach Austin at Montpelier
+Sat 10:30 AM: Saturday Beginners Week 6 at Montpelier
 Sat till 1:30 PM: General play all levels
 
 Courts:
@@ -394,18 +530,20 @@ Russett Tennis Courts - Experienced players
 Montpelier Tennis Court, 12771 Laurel-Bowie Rd - Beginners and Intermediate
 Greenview - as needed
 
+Reminder: log your match scores on the leaderboard after every session 👉 [YOUR LEADERBOARD URL]
+
 Waiver: https://aces-member-waiver.netlify.app/
 
-Month 2 starts Monday. Let us go 💪💚</div>
-    <button class="copy-btn" onclick="cp('w4su3',this)">Copy</button></div>
+Week 6 let us go even harder 💪💚</div>
+    <button class="copy-btn" onclick="cp('w5su3',this)">Copy</button></div>
 
     <div class="msg-wrap"><div class="msg-header"><span class="badge b-engage" style="background:#FCEBEB;color:#791F1F">WEATHER</span><span class="msg-label">Rain Day Template</span><span class="msg-time">As needed</span></div>
-    <div class="msg-box" id="w4su4">Hey ACES fam quick update 👋
+    <div class="msg-box" id="w5su4">Hey ACES fam quick update 👋
 
-Tonight session at [COURT NAME] is cancelled because of [rain / weather]. I know it is annoying but safety first and the courts are not going anywhere.
+Tonight's session at [COURT NAME] is cancelled because of [rain / weather]. Safety first and the courts will be there when it clears.
 
-Keep an eye here for updates and we will be back out there as soon as it is clear. Use tonight to rest those legs ☔💚</div>
-    <button class="copy-btn" onclick="cp('w4su4',this)">Copy</button></div>
+Rest up, stay dry and keep an eye here for updates. We will be back out there as soon as it is clear ☔💚</div>
+    <button class="copy-btn" onclick="cp('w5su4',this)">Copy</button></div>
   </div>
 
 </div>
@@ -422,8 +560,8 @@ function cp(id, btn) {
     setTimeout(function() { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
   });
 }
-function w4day(id, btn) {
-  document.querySelectorAll('.w4day').forEach(function(d) { d.style.display = 'none'; });
+function w5day(id, btn) {
+  document.querySelectorAll('.w5day').forEach(function(d) { d.style.display = 'none'; });
   var el = document.getElementById(id);
   if(el) el.style.display = 'block';
 }
