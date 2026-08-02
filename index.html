@@ -19,10 +19,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--black)
 .b-weather{background:#e8f0fe;color:#1a3a7a}
 .b-event{background:#fff0e0;color:#7a3500}
 .b-social{background:#e0e8ff;color:#1a2e7a}
-.b-thanks{background:#fde8f5;color:#6b0a4a}
-.b-mubadala{background:#0f2d18;color:#c9a84c}
 .b-merch{background:#e8f5ee;color:#0a4a2a}
-.b-field{background:#e8f5ee;color:#0f2d18}
+.b-semi{background:#0f2d18;color:#c9a84c}
+.b-tiktok{background:#fce8f3;color:#7c0c4a}
+.b-tourney{background:#fff8e0;color:#6b4f00}
 .msg-wrap{background:white;border-radius:12px;border:0.5px solid var(--border);padding:16px;margin-bottom:12px}
 .msg-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .msg-label{font-size:13px;font-weight:600}.msg-time{font-size:11px;color:var(--gray);margin-left:auto}
@@ -52,35 +52,31 @@ body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--black)
 <div class="panel">
 <div class="card" style="background:var(--green-dark);border:none;margin-bottom:20px">
   <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:6px">NEW WEEK - DAILY MESSAGES</div>
-  <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Field Day recap. RR final week. New RR starts. Internal tournament August. DC Open pics.</div>
+  <div style="font-size:12px;color:var(--gold);letter-spacing:1px">Semifinals this week. New round robin live. Social event coming. DC Open pics wanted.</div>
 </div>
 
 <!-- MONDAY -->
 <div id="mon" class="day">
 <div class="order-guide"><div class="order-guide-title">Monday — Send in this order</div><div class="order-steps">
-  <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Field Day thank you</div>
+  <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather update</div>
   <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-  <div class="order-step"><div class="order-num">4</div>10:00 AM — Field Day donation breakdown</div>
-  <div class="order-step"><div class="order-num">5</div>11:00 AM — DC Open pictures + who is attending</div>
+  <div class="order-step"><div class="order-num">4</div>10:00 AM — Semifinals announcement</div>
+  <div class="order-step"><div class="order-num">5</div>11:00 AM — New round robin is live</div>
   <div class="order-step"><div class="order-num">6</div>12:00 PM — Daily question</div>
 </div></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="badge b-thanks">FIELD DAY THANK YOU</span><span class="msg-label">Monday Morning</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Monday Morning</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="m1">Good morning ACES family 💚🎾
 
-We have to start this week the right way.
+New week and we are getting into the business end of the round robin. Semifinals are here. New round robin is live. And we have something special in the works for you all before summer ends.
 
-Field Day was incredible. The energy, the games, the community, the donations — all of it. You showed up and you showed out and we could not be more proud of what this club did on Saturday.
-
-This is exactly what ACES is supposed to be. Thank you. From the bottom of our hearts, thank you.
-
-New week, big things ahead. Let us keep the momentum going.
+This is the part of the season that separates the ones who show up from the ones who were always going to show up. Be the one who shows up.
 
 Quote of the day:
-"Coming together is a beginning. Keeping together is progress. Working together is success." — Henry Ford
+"Pressure is a privilege. It only comes to those who earn it." — Billie Jean King
 
-That was us on Saturday. Let us keep building 💪</div>
+You earned this moment. Now go compete 💪</div>
 <button class="copy-btn" onclick="cp('m1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Morning Weather Check</span><span class="msg-time">8:30 AM</span></div>
@@ -88,7 +84,7 @@ That was us on Saturday. Let us keep building 💪</div>
 
 Tonight — [SAFE TO PLAY / CANCELLED — update here]
 
-Watching it daily. Any changes posted here immediately 👀 @all</div>
+Watching it daily and posting updates every morning. Stay close to the group 👀 @all</div>
 <button class="copy-btn" onclick="cp('m2',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-label">Where Tonight</span><span class="msg-time">9:00 AM</span></div>
@@ -101,50 +97,48 @@ Watching it daily. Any changes posted here immediately 👀 @all</div>
 @all</div>
 <button class="copy-btn" onclick="cp('m3',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-field">FIELD DAY — WHAT YOU DID</span><span class="msg-label">Donation Breakdown</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="m4">Let us talk about what this community actually pulled off at Field Day 👇🎾💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-semi">SEMIFINALS ARE HERE</span><span class="msg-label">Round Robin — Final Stage</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="m4">The round robin semifinals are set 🏆🎾
 
-Here is what was donated:
+EXPERIENCED DIVISION
+Group A No.1 + No.2 vs Group B No.1 + No.2
+First to win 2 sets takes the match.
 
-🎒 5 backpacks
-📓 12 composition notebooks
-🥡 1 lunch box
-📄 4 packs of paper
-📔 61 spiral notebooks
-🖍️ 12 x 12-pack + 1 x 18-pack colored pencils
-✏️ 515 pencils
-Plus crayons, pens, markers, glue sticks
+Mikey C and Nate (Group A) vs Femi and Steve (Group B)
 
-3 full boxes of supplies. $138 in cash collected.
+Get this scheduled this week. Reach out, agree on a time and get it done. The whole club is watching 👀
 
-And ACES as a club is matching those donations. Every single item and every dollar.
+BEGINNERS DIVISION
+Makayla vs Kay
+TBAV vs Sandra
 
-That is what this club does. You brought it and we doubled it. Kids in this community are going back to school better prepared because of what you did on Saturday.
+Same format — first to win 2 sets wins the match.
 
-We are beyond proud of this group 💚 @all</div>
+Beginners — you made it to the semis. Do not let up now. This is your moment 💚
+
+To everyone in the semifinals — the club is behind you. Go compete 🎾 @all</div>
 <button class="copy-btn" onclick="cp('m4',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mubadala">DC OPEN</span><span class="msg-label">Pictures + Who Is Still Going?</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="m5">To everyone who volunteered at the Mubadala Citi DC Open — we want to see your pictures 📸🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">NEW ROUND ROBIN</span><span class="msg-label">Live Now — Check Your Matchups</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="m5">While the semifinals are happening, the new round robin is also live 🎾
 
-Drop them right here in the group. The courts, the players, the behind the scenes, all of it. Let the rest of the group see what it looks like inside a pro tournament.
+Fresh groups. New opponents. Different matchups.
 
-And for those who have not been yet — the DC Open runs through August 3 at Rock Creek Park Tennis Center in DC. Are you planning to go?
+Go to www.myacesclub.com right now, find your name and check who you are playing this week. Reach out to your opponent today — do not wait until Thursday.
 
-React below:
-🙋 Yes I am going / already went
-👀 Still thinking about it
-📸 Already went and dropping pictures now
-
-Tag anyone from the group you went with 👇 @all 💚</div>
+Not on the website yet? Sign up at www.myacesclub.com — hit Join Now — two minutes and you are in 💚 @all</div>
 <button class="copy-btn" onclick="cp('m5',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Monday Engage</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="m6">Monday question fresh off Field Day 👀😄🎾
+<div class="msg-box" id="m6">Monday question and it is a hot one 👀🔥🎾
 
-What was your favourite moment from Saturday — on or off the court?
+Semifinals are set. Mikey C and Nate vs Femi and Steve in the experienced draw.
 
-Could be a game, a moment, a conversation, a reaction, anything. Drop it below and let us relive it together 👇 @all 💚</div>
+Who are you putting your money on and why?
+
+No neutral answers allowed. Pick a side 😄
+
+👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('m6',this)">Copy</button></div>
 </div>
 
@@ -154,7 +148,7 @@ Could be a game, a moment, a conversation, a reaction, anything. Drop it below a
   <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather update</div>
   <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-  <div class="order-step"><div class="order-num">4</div>10:00 AM — Last week of round robin + sign up on website</div>
+  <div class="order-step"><div class="order-num">4</div>10:00 AM — DC Open pictures callout for TikTok + IG</div>
   <div class="order-step"><div class="order-num">5</div>11:00 AM — Merch reminder</div>
   <div class="order-step"><div class="order-num">6</div>12:00 PM — Daily question</div>
 </div></div>
@@ -162,16 +156,16 @@ Could be a game, a moment, a conversation, a reaction, anything. Drop it below a
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Tuesday Morning</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="t1">Good morning ACES 💚🎾
 
-Tuesday and we are riding the Field Day energy into a big week.
+Tuesday. Semifinals need to get scheduled this week — if you are in the draw, reach out to your opponent today.
 
-This is the last week of the current round robin. Top 2 from each group play each other this week. If that is you, reach out to your opponent today and get it scheduled.
+New round robin matchups are also live. Go check www.myacesclub.com and get your first match sorted.
 
-Everyone else — new round robin starts next week. Different opponents, same energy.
+Two things to do today. No excuses 😄
 
 Quote of the day:
-"Success is not final, failure is not fatal. It is the courage to continue that counts." — Winston Churchill
+"You don't have to be great to start, but you have to start to be great." — Zig Ziglar
 
-Keep going. This is just the beginning 💪</div>
+Start something today 💪</div>
 <button class="copy-btn" onclick="cp('t1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Tuesday Check</span><span class="msg-time">8:30 AM</span></div>
@@ -179,7 +173,7 @@ Keep going. This is just the beginning 💪</div>
 
 Tonight — [SAFE TO PLAY / CANCELLED — update here]
 
-Changes posted here immediately 👀 @all</div>
+Any changes posted here immediately 👀 @all</div>
 <button class="copy-btn" onclick="cp('t2',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-label">Where Tonight</span><span class="msg-time">9:00 AM</span></div>
@@ -192,36 +186,38 @@ Changes posted here immediately 👀 @all</div>
 @all</div>
 <button class="copy-btn" onclick="cp('t3',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">ROUND ROBIN — FINAL WEEK</span><span class="msg-label">Top 2 Play + Sign Up on Website</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="t4">This is the last week of the current round robin 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-tiktok">DC OPEN PICTURES</span><span class="msg-label">Get Featured on TikTok and Instagram</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="t4">To everyone who went to the Mubadala Citi DC Open — we want your pictures 📸🎾
 
-If you finished in the top 2 of your group, this week is your time. Reach out to your opponent, schedule the match and get it done. Log the score directly on the match at www.myacesclub.com as soon as it is over.
+Drop them in the group right now. The courts, the players, the atmosphere, behind the scenes — all of it.
 
-For everyone else — new round robin starts next week. Fresh matchups, different opponents, same competitive format. Get ready.
+We are putting together content for our TikTok and Instagram and we want ACES members featured. If you send your pictures you could be on our page.
 
-And if you are not signed up on the website yet, do it now before the new round robin begins. Your profile tracks your full record automatically.
+Tag who you went with and drop the pics below 👇
 
-www.myacesclub.com — Join Now — two minutes 💚 @all</div>
+And if you are still going before August 3 — go and document everything. Rock Creek Park Tennis Center, DC. World class tennis on your doorstep.
+
+Send your pics to get featured 📲 @all 💚</div>
 <button class="copy-btn" onclick="cp('t4',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-merch">MERCH</span><span class="msg-label">Get Yours — Available Every Session</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="t5">Quick merch reminder 👕🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-merch">MERCH</span><span class="msg-label">Available Every Session</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="t5">Quick reminder 👕🎾
 
-ACES merch is available at every session this week. If you have not picked yours up yet, come out to any session and grab it.
+ACES merch is at every session this week. Femi has it at the court — come grab yours.
 
-Femi will have it at the court. Do not wait — supplies are not unlimited.
+If you have not picked it up yet, do not wait. Come out to any session this week and it is yours.
 
-React with 👕 if you still need yours @all 💚</div>
+React with 👕 if you still need yours 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('t5',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Tuesday Engage</span><span class="msg-time">12:00 PM</span></div>
 <div class="msg-box" id="t6">Tuesday question 👀😄🎾
 
-New round robin starts next week. You get to pick one person in the club you have never played before that you want as your first matchup.
+Beginners division semifinals — Makayla vs Kay and TBAV vs Sandra.
 
-Who are you picking and why? 
+Who is advancing and who is pulling the upset?
 
-Be strategic. Be honest. Be funny. All of the above 😄
+Give us your predictions. One sentence per match 😄
 
 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('t6',this)">Copy</button></div>
@@ -233,24 +229,24 @@ Be strategic. Be honest. Be funny. All of the above 😄
   <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather update</div>
   <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-  <div class="order-step"><div class="order-num">4</div>10:00 AM — PG County partnership + August plans</div>
-  <div class="order-step"><div class="order-num">5</div>11:00 AM — Social event ideas ask</div>
+  <div class="order-step"><div class="order-num">4</div>10:00 AM — Social event teaser</div>
+  <div class="order-step"><div class="order-num">5</div>11:00 AM — Internal tournament August + Instagram</div>
   <div class="order-step"><div class="order-num">6</div>12:00 PM — Daily question</div>
 </div></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Wednesday Morning</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="w1">Happy Wednesday ACES family 💚🎾
 
-Midweek. The summer is in full gear and ACES is moving with it.
+Midweek check in. Semifinals should be getting scheduled. New round robin matchups should be in your calendar.
 
-Field Day done and delivered. Round robin in its final week. New round robin around the corner. August is shaping up to be huge.
+If you have not done either of those things today is the day to sort it out. No more waiting.
 
-Keep showing up. The best is still ahead.
+Something exciting is also coming for the social side of ACES — keep reading 👇
 
 Quote of the day:
-"In the middle of every difficulty lies opportunity." — Albert Einstein
+"The way to get started is to quit talking and begin doing." — Walt Disney
 
-Midweek is the hardest part. Push through it 💪</div>
+Less talking. More doing. Today 💪</div>
 <button class="copy-btn" onclick="cp('w1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Wednesday Check</span><span class="msg-time">8:30 AM</span></div>
@@ -258,11 +254,11 @@ Midweek is the hardest part. Push through it 💪</div>
 
 Tonight — [SAFE TO PLAY / CANCELLED — update here]
 
-Any changes posted here right away 👀 @all</div>
+Posting changes here immediately 👀 @all</div>
 <button class="copy-btn" onclick="cp('w2',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-label">Where Tonight</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="w3">Court poll — where tonight if weather holds? 📍
+<div class="msg-box" id="w3">Court poll — where tonight if weather clears? 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd
@@ -271,38 +267,40 @@ Any changes posted here right away 👀 @all</div>
 React or reply @all</div>
 <button class="copy-btn" onclick="cp('w3',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-event">PG COUNTY PARTNERSHIP + AUGUST</span><span class="msg-label">What is Coming</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="w4">Big things in the works for August 👇💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-event">SOMETHING SPECIAL IS COMING</span><span class="msg-label">Social Event — Watch This Space</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="w4">We are putting together something special for this community before summer ends 🎉💚
 
-PG COUNTY PARTNERSHIP
-We are partnering with Prince George's County for a community giving initiative. Details are still being finalized but this is going to be something meaningful for the community around us. More details coming very soon.
+We are not giving away details just yet but it is coming and it is going to be worth the wait.
 
-INTERNAL TOURNAMENT — AUGUST
-We are hosting an internal ACES tournament in August. Proper bracket, competitive format, prizes and full club bragging rights. This is your chance to compete against your own people before we take on the rest.
+Keep your August weekends a little open. Announcement dropping soon.
 
-Date and format dropping soon. Start preparing 🎾
-
-Stay connected. August is going to be a big month for this club 💚 @all</div>
+React with 👀 if you are ready for it 👇 @all</div>
 <button class="copy-btn" onclick="cp('w4',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">SOCIAL EVENT IDEAS</span><span class="msg-label">We Want Your Suggestions</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="w5">We are planning two social events before summer ends and we want YOUR ideas 🎉💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-tourney">INTERNAL TOURNAMENT + FOLLOW US</span><span class="msg-label">August Bracket + Instagram</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="w5">Two things 👇
 
-What would you actually show up for? Be specific.
+INTERNAL ACES TOURNAMENT — AUGUST
+We are hosting an internal bracket tournament in August. Full draw, competitive format, prizes and full club bragging rights. Date dropping soon.
 
-Rooftop happy hour? Cookout? Bowling night? Karaoke? Boat ride? Escape room? Something completely different?
+Start preparing. Use the new round robin to get your reps in. The members who are active now are the ones who will be sharp when the bracket drops.
 
-Drop your idea below. The ones with the most energy are going on the calendar.
+FOLLOW US ON INSTAGRAM
+All the Field Day content, DC Open features, match moments and everything ACES is going up on our page.
 
-This is your club. Tell us what you want to do 👇 @all 💚</div>
+[PASTE INSTAGRAM LINK]
+
+Follow, share and tag someone who should be part of this club 📲 💚 @all</div>
 <button class="copy-btn" onclick="cp('w5',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Wednesday Engage</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="w6">Midweek question — field day edition 😄🎾
+<div class="msg-box" id="w6">Midweek question 👀😄🎾
 
-If you had to describe Field Day in three words, what are they?
+If the ACES internal tournament had a trophy ceremony and you won, what is the first thing you say in your victory speech?
 
-No sentences. Just three words. Drop them below 👇 @all 💚</div>
+Keep it under 3 sentences. The more dramatic the better 😄
+
+👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('w6',this)">Copy</button></div>
 </div>
 
@@ -312,22 +310,22 @@ No sentences. Just three words. Drop them below 👇 @all 💚</div>
   <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather update</div>
   <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-  <div class="order-step"><div class="order-num">4</div>10:00 AM — New round robin preview</div>
-  <div class="order-step"><div class="order-num">5</div>11:00 AM — Instagram follow</div>
+  <div class="order-step"><div class="order-num">4</div>10:00 AM — Semifinal urgency + new RR reminder</div>
+  <div class="order-step"><div class="order-num">5</div>11:00 AM — TikTok follow + DC Open pics</div>
   <div class="order-step"><div class="order-num">6</div>12:00 PM — Daily question</div>
 </div></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Thursday Morning</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="th1">Morning fam 💚🎾
 
-Thursday. Almost at the weekend and the round robin final matches need to get done today or tomorrow if they are not already.
+Thursday and the week is moving fast. If your semifinal match is not scheduled yet, today is the day. Do not let it go into the weekend without a plan.
 
-If you are in the top 2 of your group and your match is not scheduled yet — today is the day. No more waiting.
+New round robin players — same thing. First matchup should be on the calendar by now.
 
 Quote of the day:
-"The secret of getting ahead is getting started." — Mark Twain
+"Hard work spotlights the character of people. Some turn up their sleeves. Some turn up their noses. Some don't turn up at all." — Sam Ewing
 
-Whatever you have been putting off — a match, signing up, reaching out — do it today 💪</div>
+Turn up your sleeves this week 💪</div>
 <button class="copy-btn" onclick="cp('th1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Thursday Check</span><span class="msg-time">8:30 AM</span></div>
@@ -335,11 +333,11 @@ Whatever you have been putting off — a match, signing up, reaching out — do 
 
 Tonight — [SAFE TO PLAY / CANCELLED — update here]
 
-Posting changes here immediately 👀 @all</div>
+Any changes posted here right away 👀 @all</div>
 <button class="copy-btn" onclick="cp('th2',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-label">Where Tonight</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="th3">Where tonight if weather cooperates? 📍
+<div class="msg-box" id="th3">Where tonight if skies are clear? 📍
 
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd
@@ -348,39 +346,40 @@ Posting changes here immediately 👀 @all</div>
 @all</div>
 <button class="copy-btn" onclick="cp('th3',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">NEW ROUND ROBIN</span><span class="msg-label">Starts Next Week — Get Ready</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="th4">New round robin kicks off next week 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-semi">SEMIFINALS + NEW ROUND ROBIN</span><span class="msg-label">Get It Done This Week</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="th4">Two things that need to happen before Sunday 👇🎾
 
-Same format. Different people to play. Fresh matchups across the whole club.
+SEMIFINALS
+If you are in the experienced or beginners draw and your match is not played yet, today and Friday are your best days. Reach out to your opponent now, agree on a time and make it happen.
 
-This is your chance to face opponents you have not played yet and build your record going into the internal tournament in August.
+Experienced: Mikey C + Nate vs Femi + Steve
+Beginners: Makayla vs Kay | TBAV vs Sandra
 
-What you need to do before next week:
-- Make sure you are signed up on www.myacesclub.com
-- Your profile should be active and your record up to date
-- Any outstanding scores from this round robin — log them now
+First to win 2 sets advances. Log the score on the match at www.myacesclub.com as soon as you are done.
 
-New round starts fresh. Come in ready 💚 @all</div>
+NEW ROUND ROBIN
+First week matchups should be played this week too. Go to www.myacesclub.com, find your opponent and get something booked.
+
+Two tournaments running at the same time. No reason to be sitting still 💚 @all</div>
 <button class="copy-btn" onclick="cp('th4',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">FOLLOW US</span><span class="msg-label">Instagram — Stay Connected</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="th5">If you have not followed us on Instagram yet, go do it now 📲
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-tiktok">TIKTOK + DC OPEN</span><span class="msg-label">Send Your Pictures to Get Featured</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="th5">We are building content for TikTok and we want ACES members in it 📲🎾
 
-[PASTE INSTAGRAM LINK]
+If you went to the DC Open and have pictures or videos — send them here or DM us directly. We are putting together a feature and your moments from the tournament could be on our page.
 
-Field Day content is going up. Match moments. Community highlights. Everything ACES.
+Follow us on TikTok too while you are at it:
+[PASTE TIKTOK LINK]
 
-Follow, share and tag someone who should be part of this club 💚 @all</div>
+DC Open runs through August 3. Still time to go if you have not 💚 @all</div>
 <button class="copy-btn" onclick="cp('th5',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Thursday Engage</span><span class="msg-time">12:00 PM</span></div>
 <div class="msg-box" id="th6">Thursday question 👀😄🎾
 
-New round robin starts next week. You are facing all new opponents.
+The semifinals are here. If you were commentating the experienced semifinal live — Mikey C and Nate vs Femi and Steve — what is your opening line?
 
-What is the one part of your game you are working on most before the new round begins?
-
-Be specific. No "everything" answers 😄
+Give us the commentary. The more dramatic the better 📺😄
 
 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('th6',this)">Copy</button></div>
@@ -392,29 +391,29 @@ Be specific. No "everything" answers 😄
   <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather + weekend forecast</div>
   <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-  <div class="order-step"><div class="order-num">4</div>10:00 AM — Log scores + merch reminder</div>
-  <div class="order-step"><div class="order-num">5</div>11:00 AM — TikTok follow</div>
+  <div class="order-step"><div class="order-num">4</div>10:00 AM — Log scores + website</div>
+  <div class="order-step"><div class="order-num">5</div>11:00 AM — Merch + Instagram</div>
   <div class="order-step"><div class="order-num">6</div>12:00 PM — Daily question</div>
 </div></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Friday Morning</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="f1">Happy Friday ACES family 💚🎾
 
-Last weekday of the current round robin. If your final match is not done yet, this weekend is your last chance.
+Last weekday of the week and the semifinals + new round robin matches need to get done this weekend if they are not already.
 
-New round robin starts next week. Make sure you close out this one properly.
+No excuses this weekend. Get on the court, play your match, log the score and enjoy the summer.
 
 Quote of the day:
-"Fridays are the hardest in some ways — you're so close to freedom." — Lauren Oliver
+"The pain of discipline is far less than the pain of regret." — Sarah Bombell
 
-Almost there. Finish strong first 💪🎾</div>
+Play the match now. Do not regret it Monday 💪🎾</div>
 <button class="copy-btn" onclick="cp('f1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Friday + Weekend Check</span><span class="msg-time">8:30 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Friday + Weekend Forecast</span><span class="msg-time">8:30 AM</span></div>
 <div class="msg-box" id="f2">Friday weather update ⛈️
 
 Tonight — [SAFE TO PLAY / CANCELLED — update here]
-Weekend outlook — [UPDATE WITH SAT + SUN FORECAST]
+Weekend outlook — [UPDATE SAT + SUN FORECAST]
 
 Monitoring all weekend 👀 @all</div>
 <button class="copy-btn" onclick="cp('f2',this)">Copy</button></div>
@@ -429,34 +428,35 @@ Monitoring all weekend 👀 @all</div>
 @all</div>
 <button class="copy-btn" onclick="cp('f3',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">LOG SCORES + MERCH</span><span class="msg-label">Two Things Before the Weekend</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="f4">Two quick things 👇
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">LOG SCORES + WEBSITE</span><span class="msg-label">Keep Your Record Updated</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="f4">If you played any matches this week — semifinal or new round robin — log the scores now 🎾
 
-LOG YOUR SCORES
-If you played a match this week and it is not logged, go do it now. www.myacesclub.com — find the match — enter the score on the match itself. Not Submit. On the match.
+www.myacesclub.com — find your match — enter the score on the match itself. Not Submit. On the match.
 
-The round robin closes this week. Do not let your results go unrecorded.
+Your record only updates when the score goes in. And with the internal tournament coming in August, you want your stats current.
 
-MERCH
-Still available at every session. Femi has it at the court. If you have not picked yours up yet, come out this weekend and grab it.
-
-React with 👕 if you still need yours @all 💚</div>
+Not on the website yet? www.myacesclub.com — Join Now — two minutes 💚 @all</div>
 <button class="copy-btn" onclick="cp('f4',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">FOLLOW US</span><span class="msg-label">TikTok — We Are on There Too</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="f5">Field Day content is going up on TikTok 📲🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-merch">MERCH + INSTAGRAM</span><span class="msg-label">Get Yours + Follow Us</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="f5">Two quick ones 👇
 
-[PASTE TIKTOK LINK]
+MERCH
+Still available at every session. Femi has it at the court. If you have not picked yours up yet come out this weekend 👕
 
-Follow us, share it and help grow the ACES community beyond this group chat 💚 @all</div>
+INSTAGRAM
+Field Day content and DC Open features going up this week. Follow us if you are not already:
+[PASTE INSTAGRAM LINK]
+
+Share it with someone who should be in this club 💚 @all</div>
 <button class="copy-btn" onclick="cp('f5',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Friday Engage</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="f6">Friday question — summer edition 👀😄🎾
+<div class="msg-box" id="f6">Friday question to close out the week 👀😄🎾
 
-If ACES had a signature summer drink — something that represents the vibe of this club — what would it be called and what is in it?
+You are heading into your semifinal match this weekend. What is your warm up song — the one track that gets you completely locked in before you step on the court?
 
-Get creative. The more specific the better 😄
+One song. Artist and title. No skips 😄
 
 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('f6',this)">Copy</button></div>
@@ -467,23 +467,23 @@ Get creative. The more specific the better 😄
 <div class="order-guide"><div class="order-guide-title">Saturday — Send in this order</div><div class="order-steps">
   <div class="order-step"><div class="order-num">1</div>8:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather update</div>
-  <div class="order-step"><div class="order-num">3</div>10:00 AM — Court poll + final round robin push</div>
+  <div class="order-step"><div class="order-num">3</div>10:00 AM — Court poll + semifinal push</div>
   <div class="order-step"><div class="order-num">4</div>12:00 PM — Daily question</div>
 </div></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Saturday Morning</span><span class="msg-time">8:00 AM</span></div>
 <div class="msg-box" id="s1">Good morning ACES 💚🎾
 
-Saturday. Last weekend of the current round robin.
+Saturday. Perfect day for a semifinal.
 
-If your final match is not played, today is the day. Get out there, compete and log the score before Sunday.
+If your match is happening today — go compete like it means something. Because it does. If you are watching — go support your people on the court.
 
-New round robin starts next week so let us close this one out right.
+And for the new round robin players — get a match in this weekend while you have the time.
 
 Quote of the day:
-"Champions are made from something they have deep inside — a desire, a dream, a vision." — Muhammad Ali
+"It's not the will to win that matters — everyone has that. It's the will to prepare to win that matters." — Paul "Bear" Bryant
 
-Get out there and compete 💪🎾</div>
+Did you prepare? Now go show it 💪🎾</div>
 <button class="copy-btn" onclick="cp('s1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Saturday Check</span><span class="msg-time">8:30 AM</span></div>
@@ -491,7 +491,7 @@ Get out there and compete 💪🎾</div>
 
 Today — [SAFE TO PLAY / MONITORING — update here]
 
-Updates posted here if anything changes 👀 @all</div>
+Updates here if anything changes 👀 @all</div>
 <button class="copy-btn" onclick="cp('s2',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-label">Saturday Courts</span><span class="msg-time">10:00 AM</span></div>
@@ -501,22 +501,19 @@ Updates posted here if anything changes 👀 @all</div>
 2️⃣ Montpelier Tennis Court, 12771 Laurel-Bowie Rd
 3️⃣ Greenview Tennis Court
 
-Last weekend of the round robin — top 2 matchups need to happen this weekend. React or reply @all 💚</div>
+Semifinals and new round robin matches available this weekend. React or reply @all 💚</div>
 <button class="copy-btn" onclick="cp('s3',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Saturday Engage</span><span class="msg-time">12:00 PM</span></div>
 <div class="msg-box" id="s4">Saturday question 👀😄🎾
 
-We asked for social event ideas this week and the suggestions are coming in.
+Be honest. When you are losing a set and need to reset mentally, what do you actually do between points?
 
-Real talk — if ACES planned a boat ride on the Potomac, who is actually showing up?
+Talk to yourself? Bounce the racket? Deep breath? Walk slowly? Pretend you meant it?
 
-React:
-🙋 I am absolutely in
-👀 Depends on the cost
-❌ Not a boat person
+Drop your real answer below 😄
 
-Drop your vote 👇 @all 💚</div>
+👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('s4',this)">Copy</button></div>
 </div>
 
@@ -526,23 +523,23 @@ Drop your vote 👇 @all 💚</div>
   <div class="order-step"><div class="order-num">1</div>9:00 AM — Welcome + Quote</div>
   <div class="order-step"><div class="order-num">2</div>9:30 AM — Weather update</div>
   <div class="order-step"><div class="order-num">3</div>10:00 AM — Week preview + all reminders</div>
-  <div class="order-step"><div class="order-num">4</div>11:00 AM — Instagram follow (2nd this week)</div>
+  <div class="order-step"><div class="order-num">4</div>11:00 AM — Instagram 2nd post</div>
   <div class="order-step"><div class="order-num">5</div>12:00 PM — Daily question</div>
 </div></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-label">Sunday Rest Day</span><span class="msg-time">9:00 AM</span></div>
 <div class="msg-box" id="su1">Happy Sunday ACES family 🙏💚
 
-Rest day. You earned it after a big week.
+Rest day. Take it easy. Let your body recover.
 
-Field Day in the books. Round robin closing out. New one starting. Internal tournament in August. PG County partnership in the works. Social events being planned.
+Big week — semifinals in both divisions, new round robin launched, DC Open content going up, something special being planned for this community.
 
-This club does not stop and it is because of you. Take today easy and come back fresh tomorrow.
+ACES does not slow down in August. Neither do you.
 
 Quote of the day:
-"Take rest. A field that has rested gives a bountiful crop." — Ovid
+"Your body can stand almost anything. It's your mind that you have to convince." — Unknown
 
-Rest today. Harvest the results next week 💪</div>
+Rest the body. Come back with the mind ready 💪</div>
 <button class="copy-btn" onclick="cp('su1',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-weather">WEATHER</span><span class="msg-label">Sunday Check</span><span class="msg-time">9:30 AM</span></div>
@@ -550,29 +547,32 @@ Rest today. Harvest the results next week 💪</div>
 
 Today — [SAFE TO PLAY / MONITORING]
 
-Log any scores from this weekend at www.myacesclub.com 👀 @all</div>
+Log any scores from the weekend at www.myacesclub.com 👀 @all</div>
 <button class="copy-btn" onclick="cp('su2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-event">WEEK PREVIEW</span><span class="msg-label">Everything Coming Up</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="su3">Here is everything on the ACES radar heading into the new week 📅💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-event">NEW WEEK PREVIEW</span><span class="msg-label">Everything on the Radar</span><span class="msg-time">10:00 AM</span></div>
+<div class="msg-box" id="su3">Here is everything coming up for ACES 📅💚
 
-🎾 New round robin begins this week — fresh matchups, same format, new opponents. Check www.myacesclub.com for your assignments Monday.
+🏆 Semifinals — any results not in yet need to happen next week
+Experienced: Mikey C + Nate vs Femi + Steve
+Beginners: Makayla vs Kay | TBAV vs Sandra
+First to win 2 sets. Log scores at www.myacesclub.com
 
-🏆 Internal ACES tournament — coming in August. Bracket format, prizes, full club competition. Details dropping soon.
+🎾 New round robin — Week 2 matchups begin. Check www.myacesclub.com for your assignments.
 
-🤝 PG County community partnership — in the works, more details coming soon.
+🏅 Internal ACES tournament — coming in August. Date dropping soon. Stay sharp.
 
-🎾 DC Open through August 3 — who is still going? Drop your plans in the group.
+🎉 Social event — something special being planned. Watch this space.
 
-🆚 Owings Mills Ballers — date TBD, stay sharp and active.
-
-🎉 Two social events before summer ends — drop your ideas if you have not.
+🆚 Owings Mills Ballers — date TBD. Stay active and ready.
 
 👕 Merch — Femi has it at every session. Come get yours.
 
+📸 DC Open — send your pictures to get featured on our TikTok and Instagram.
+
 📲 Instagram: [PASTE LINK]
 📲 TikTok: [PASTE LINK]
-🌐 Create your profile: www.myacesclub.com
+🌐 www.myacesclub.com — sign up and track your record
 
 Courts:
 Russett Tennis Courts, Russett MD 20724
@@ -583,19 +583,21 @@ Greenview as needed</div>
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-social">FOLLOW US</span><span class="msg-label">Instagram — 2nd Post This Week</span><span class="msg-time">11:00 AM</span></div>
 <div class="msg-box" id="su4">Sunday reminder 📲
 
-Follow us on Instagram for Field Day content, match moments and everything ACES.
+Follow us on Instagram for Field Day content, DC Open features, match moments and everything ACES.
 
 [PASTE INSTAGRAM LINK]
 
-Share it. Tag a friend. Help us grow 💚 @all</div>
+Share it. Tag someone. Help us grow this community 💚 @all</div>
 <button class="copy-btn" onclick="cp('su4',this)">Copy</button></div>
 
 <div class="msg-wrap"><div class="msg-header"><span class="badge b-question">DAILY QUESTION</span><span class="msg-label">Sunday Close Out</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="su5">Sunday close out question 👀🎾
+<div class="msg-box" id="su5">Sunday close out 👀🎾
 
-New round robin starts this week. One thing you are doing differently this time around compared to the last one.
+Semifinals are in motion. New round robin is running. August is going to be big.
 
-Growth mindset only. Drop it below 👇 @all 💚</div>
+One word to describe how you are feeling about where ACES is right now as a club.
+
+Just one word. Drop it 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('su5',this)">Copy</button></div>
 </div>
 
