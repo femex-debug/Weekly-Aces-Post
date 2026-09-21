@@ -3,19 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACES Club - Week 24</title>
+<title>ACES Club - Week 25</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--green:#1a7a4a;--green-dark:#0f4f2f;--green-light:#e8f5ee;--gold:#c9a84c;--black:#111;--gray:#666;--light:#f8f8f6;--border:#e0e0e0}
 body{font-family:"DM Sans",sans-serif;background:var(--light);color:var(--black);padding:16px}
-.panel{max-width:760px;margin:0 auto;padding:8px 0 60px}
+.panel{max-width:760px;margin:0 auto;padding-bottom:60px}
 .badge{display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;margin-right:6px;margin-bottom:4px}
-.b-welcome{background:#eaf3de;color:#27500a}.b-poll{background:#faeeda;color:#633806}
-.b-q{background:#e0f4ff;color:#0c447c}.b-rr{background:#fce8f3;color:#7c0c4a}
-.b-wx{background:#e8f0fe;color:#1a3a7a}.b-tip{background:#e8f5ee;color:#0f2d18}
-.b-run{background:#fff0e0;color:#7a3500}.b-social{background:#e0e8ff;color:#1a2e7a}
-.b-mot{background:#0f2d18;color:#c9a84c}.b-clinic{background:#C9A84C;color:#0f2d18}
+.b-am{background:#eaf3de;color:#27500a}
+.b-mid{background:#faeeda;color:#633806}
+.b-pm{background:#e0f4ff;color:#0c447c}
+.b-rr{background:#fce8f3;color:#7c0c4a}
+.b-mot{background:#0f2d18;color:#c9a84c}
+.b-sat{background:#fff0e0;color:#7a3500}
+.b-tip{background:#e8f5ee;color:#0f2d18}
+.b-recap{background:#C9A84C;color:#0f2d18}
 .msg-wrap{background:white;border-radius:12px;border:0.5px solid var(--border);padding:16px;margin-bottom:12px}
 .msg-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .msg-time{font-size:11px;color:var(--gray);margin-left:auto}
@@ -45,510 +48,320 @@ body{font-family:"DM Sans",sans-serif;background:var(--light);color:var(--black)
 </div>
 <div class="panel">
 <div class="hdr">
-  <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:4px">WEEK 24 MESSAGES</div>
-  <div style="font-size:12px;color:var(--gold)">Clinic Sept 19 — RSVP at myacesclub.com/Events. RR running. Varied tone all week.</div>
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:4px;color:white;margin-bottom:4px">WEEK OF SEPT 21 — 3 MESSAGES A DAY</div>
+  <div style="font-size:12px;color:var(--gold)">Post-clinic week. RR running. Varied tone. Concise.</div>
 </div>
 
 <!-- MONDAY -->
 <div id="mon" class="day">
 <div class="order-guide">
   <div class="order-guide-title">Monday — Hype</div>
-  <div class="day-theme">Fresh week energy. Clinic countdown starts.</div>
+  <div class="day-theme">Celebrate the clinic. Kick off the new week. RR push.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-    <div class="order-step"><div class="order-num">4</div>10:00 AM — Clinic countdown + invite friends</div>
-    <div class="order-step"><div class="order-num">5</div>11:00 AM — RR + how to log</div>
-    <div class="order-step"><div class="order-num">6</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">7</div>1:00 PM — Question</div>
+    <div class="order-step"><div class="order-num">1</div>7:00 AM — Morning</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Clinic recap + RR</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">MORNING</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="m1">Good morning ACES 💚🎾
 
-New week. Six days until the beginner clinic on Saturday September 19.
+New week. What a Saturday that was.
 
-If you have not told anyone about it yet — today is a great day to start. Forward the message, tag someone or just send a text. Every person you invite is a chance to grow this club.
+Tonight — [update here] ⛈️
 
-RR matchups are live. Reach out to your opponent today and get something on the calendar 💪 @all</div>
-<button class="copy-btn" onclick="cp('m1',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="m2">Tonight — [update here] ⛈️
-Checking it daily. Any changes posted here 👀 @all</div>
-<button class="copy-btn" onclick="cp('m2',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="m3">Where are we tonight? 📍
+Where are we playing? 📍
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier — 12771 Laurel-Bowie Rd
 3️⃣ Greenview Tennis Court
-@all</div>
+
+RR matchups are live. Reach out to your opponent today — not Thursday 💪 @all</div>
+<button class="copy-btn" onclick="cp('m1',this)">Copy</button></div>
+
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-recap">CLINIC RECAP + RR</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="m2">Saturday was a big one 💚🎾
+
+Thank you to everyone who came out to the beginner clinic and to everyone who brought a friend. That is exactly what this club is about — growing the community one person at a time.
+
+If you were there, drop a 🎾 below. And if someone you brought is reading this right now — welcome to ACES. We hope to see you back on the court soon.
+
+New round robin is running. Go to www.myacesclub.com → Round Robin tab, find your matchup and reach out to your opponent today 💚 @all</div>
+<button class="copy-btn" onclick="cp('m2',this)">Copy</button></div>
+
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="m3">What is the one thing you want to improve most about your game this round? 🎾
+
+One specific thing. Drop it below 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('m3',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">BEGINNER CLINIC — SEPT 19</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="m4">Six days away 🎾💚
-
-FREE Beginner Clinic — Saturday September 19
-📍 Montpelier Tennis Court — 12771 Laurel-Bowie Rd, Laurel MD
-⏰ 10:30 AM | Led by Femi | Completely free
-
-No experience needed. Just show up and bring someone.
-
-RSVP now at www.myacesclub.com → Events. Takes two minutes.
-
-Think about who in your life keeps saying they want to try tennis. This Saturday is their shot. Tag them below 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('m4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">RR + HOW TO LOG</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="m5">Save this for after your next match 🎾
-
-ROUND ROBIN:
-www.myacesclub.com → Round Robin tab → open your match → enter score on the match → submit
-
-REGULAR or CHALLENGE match:
-www.myacesclub.com → Schedule tab → open your match → enter score on the match → submit
-
-Log it the moment you walk off the court. The leaderboard is being updated — make sure your results are in there 💚 @all</div>
-<button class="copy-btn" onclick="cp('m5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="m6">"You don't have to be great to start, but you have to start to be great." — Zig Ziglar
-
-Reach out to your RR opponent. Invite a friend to the clinic. Start something today 💚 @all</div>
-<button class="copy-btn" onclick="cp('m6',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="m7">Who are you bringing to the beginner clinic this Saturday? 🎾
-
-Tag them or tell us. Let's see how big we can make this 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('m7',this)">Copy</button></div>
 </div>
 
 <!-- TUESDAY -->
 <div id="tue" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Tuesday — Skill</div>
-  <div class="day-theme">Tactical. Work on something specific today.</div>
+  <div class="day-theme">Tactical tip. RR reminder. Game question.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-    <div class="order-step"><div class="order-num">4</div>10:00 AM — Tactical tip</div>
-    <div class="order-step"><div class="order-num">5</div>11:00 AM — Clinic + RR + merch + socials</div>
-    <div class="order-step"><div class="order-num">6</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">7</div>1:00 PM — Question</div>
+    <div class="order-step"><div class="order-num">1</div>7:00 AM — Morning</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Tactical tip + log reminder</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">MORNING</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="t1">Morning ACES 💚🎾
 
-Tuesday is a good day to actually think about your game.
+Tuesday. Good day to work on something specific.
 
-Not just show up and hit — think. What worked last week? What didn't? What is one thing you want to do better this week?
+Tonight — [update here] ⛈️
 
-"The more I practice, the luckier I get." — Gary Player
-
-Go be intentional today 💪 @all</div>
-<button class="copy-btn" onclick="cp('t1',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="t2">Tonight — [update here] ⛈️
-👀 @all</div>
-<button class="copy-btn" onclick="cp('t2',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="t3">Where tonight? 📍
+Where tonight? 📍
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier — 12771 Laurel-Bowie Rd
 3️⃣ Greenview Tennis Court
+
 @all</div>
+<button class="copy-btn" onclick="cp('t1',this)">Copy</button></div>
+
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-tip">TACTICAL TIP + LOG</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="t2">This week's tip — serve placement over power 🎾
+
+Pick a target before you start your motion. Wide, body or T. Hit it at 70% with full intent. A consistent serve that lands beats a hard one that clips the net every time.
+
+Control first. Power is earned.
+
+---
+
+Played a match? Log it straight away 💚
+RR match → www.myacesclub.com → Round Robin tab → open match → score on the match → submit
+Regular match → Schedule tab → same process
+
+@all</div>
+<button class="copy-btn" onclick="cp('t2',this)">Copy</button></div>
+
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="t3">Do you play more aggressively or more defensively when you are losing? 🎾
+
+And does it actually work? Be honest 😄 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('t3',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-tip">TACTICAL TIP</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="t4">This week — stop watching your shot after you hit it 🎾
-
-Most players follow the ball with their eyes instead of recovering position. The moment you make contact, move back toward the centre of the court.
-
-Your opponent's reply is coming fast. Being in position matters more than watching where your shot lands.
-
-Hit and move. Try it this week 💚 @all</div>
-<button class="copy-btn" onclick="cp('t4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">CLINIC + RR + REMINDERS</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="t5">Quick ones 👇
-
-🎾 FREE Beginner Clinic — Saturday Sept 19, 10:30 AM at Montpelier. Bring a friend. RSVP at www.myacesclub.com → Events.
-
-🎾 RR matchups at www.myacesclub.com → Round Robin tab. Reach out to your opponent today.
-
-👕 Merch at every session — Femi has it at the court
-📸 instagram.com/atcdmv
-🎵 tiktok.com/@acestennisclub_
-🌐 www.myacesclub.com — Join Now if not signed up
-
-💚 @all</div>
-<button class="copy-btn" onclick="cp('t5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="t6">Hit and move. See the ball, recover position 🎾
-
-Small habits. Big difference over a full match 💚 @all</div>
-<button class="copy-btn" onclick="cp('t6',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="t7">What is one thing about your game you have been meaning to fix for a while but keep putting off? 🎾
-
-Be honest 😄 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('t7',this)">Copy</button></div>
 </div>
 
 <!-- WEDNESDAY -->
 <div id="wed" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Wednesday — Community</div>
-  <div class="day-theme">Warm and connective. Clinic invite push midweek.</div>
+  <div class="day-theme">Shoutout. Welcome new faces from the clinic.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-    <div class="order-step"><div class="order-num">4</div>10:00 AM — Clinic invite push</div>
-    <div class="order-step"><div class="order-num">5</div>11:00 AM — RR check + Instagram</div>
-    <div class="order-step"><div class="order-num">6</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">7</div>1:00 PM — Question</div>
+    <div class="order-step"><div class="order-num">1</div>7:00 AM — Morning</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Shoutout + welcome new members</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">MORNING</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="w1">Happy Wednesday ACES 💚🎾
 
-Midweek check in. Clinic is four days away — if you have not RSVPed yet go to www.myacesclub.com → Events and register now.
+Midweek check in. RR match not scheduled yet? Reach out to your opponent today.
 
-And if you have been meaning to invite someone, stop meaning to and just do it today. One message. That is all it takes 🙏 @all</div>
-<button class="copy-btn" onclick="cp('w1',this)">Copy</button></div>
+Tonight — [update here] ⛈️
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="w2">Tonight — [update here] ⛈️
-👀 @all</div>
-<button class="copy-btn" onclick="cp('w2',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="w3">Where tonight? 📍
+Where tonight? 📍
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier — 12771 Laurel-Bowie Rd
 3️⃣ Greenview Tennis Court
+
 @all</div>
-<button class="copy-btn" onclick="cp('w3',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('w1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">BRING SOMEONE SATURDAY</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="w4">Four days away 🎾💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-mid">SHOUTOUT + WELCOME</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="w2">Shoutout Wednesday 💚🎾
 
-FREE Beginner Clinic — Saturday September 19
-📍 Montpelier Tennis Court, 12771 Laurel-Bowie Rd
-⏰ 10:30 AM | Led by Femi | No experience needed
+Tag someone in ACES who has been consistently showing up — on the court or in this group — and tell us one thing you appreciate about them.
 
-RSVP is live at www.myacesclub.com — click Events and grab your spot.
+And a special welcome to anyone who joined us at the beginner clinic on Saturday. This is the group. Introduce yourself below if you're new 👇
 
-Who in your life has said "I want to try tennis" and never followed through? That person. Tag them right here 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('w4',this)">Copy</button></div>
+We are glad you are here 💚 @all</div>
+<button class="copy-btn" onclick="cp('w2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">RR MIDWEEK + INSTAGRAM</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="w5">Midweek RR check 🎾
-
-Not scheduled yet? www.myacesclub.com → Round Robin tab → find your matchup → reach out today.
-
-Played already? Log the score straight away — RR tab for round robin, Schedule tab for everything else, on the match itself.
-
-📸 instagram.com/atcdmv — follow for club content 💚 @all</div>
-<button class="copy-btn" onclick="cp('w5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="m_wed">This club is what it is because people showed up 🎾
-
-Every member here was once new. Someone invited them, someone made them feel welcome.
-
-Be that person for someone this week 💚 @all</div>
-<button class="copy-btn" onclick="cp('m_wed',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="w7">What is the most fun you have ever had on a tennis court? 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="w3">What is the most fun you have ever had on a tennis court? 🎾
 
 Match, drill, session — does not matter. Drop the story 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('w7',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('w3',this)">Copy</button></div>
 </div>
 
 <!-- THURSDAY -->
 <div id="thu" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Thursday — Competitive</div>
-  <div class="day-theme">Urgent. RSVP drops today. Two days to clinic.</div>
+  <div class="day-theme">Urgency on RR. Log your scores. Compete.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-    <div class="order-step"><div class="order-num">4</div>10:00 AM — RSVP live + clinic push</div>
-    <div class="order-step"><div class="order-num">5</div>11:00 AM — TikTok + website</div>
-    <div class="order-step"><div class="order-num">6</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">7</div>1:00 PM — Question</div>
+    <div class="order-step"><div class="order-num">1</div>7:00 AM — Morning</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — RR urgency + leaderboard</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">MORNING</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="th1">Morning ACES 💚🎾
 
-Thursday. Clinic is two days away — if you have not RSVPed yet, do it now at www.myacesclub.com under Events.
+Thursday. Today and Friday are your best windows to get RR matches scheduled before the weekend.
 
-RR matches — today and Friday are your best windows. Reach out to your opponent now if you have not.
+Tonight — [update here] ⛈️
+
+Where tonight? 📍
+1️⃣ Russett Tennis Courts, Russett MD 20724
+2️⃣ Montpelier — 12771 Laurel-Bowie Rd
+3️⃣ Greenview Tennis Court
 
 Leaderboard is being updated. Get your scores in 💪 @all</div>
 <button class="copy-btn" onclick="cp('th1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="th2">Tonight — [update here] ⛈️
-👀 @all</div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">RR + LOG YOUR SCORES</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="th2">RR check 🎾
+
+Match not scheduled? Go to www.myacesclub.com → Round Robin tab → find your opponent → reach out now.
+
+Played already and not logged it? Do it now.
+RR match → Round Robin tab → open the match → enter score on the match → submit
+Regular match → Schedule tab → same process
+
+The leaderboard does not update itself. Log it the moment you walk off the court 💚 @all</div>
 <button class="copy-btn" onclick="cp('th2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="th3">Where tonight? 📍
-1️⃣ Russett Tennis Courts, Russett MD 20724
-2️⃣ Montpelier — 12771 Laurel-Bowie Rd
-3️⃣ Greenview Tennis Court
-@all</div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="th3">You are down a set and need to win the next two. What is the first adjustment you make? 🎾
+
+Tactical, mental or physical — drop your reset move 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('th3',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">RSVP NOW OPEN</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="th4">RSVP is open 🎾💚
-
-FREE Beginner Clinic — Saturday September 19
-📍 Montpelier Tennis Court, 12771 Laurel-Bowie Rd
-⏰ 10:30 AM | Led by Femi
-
-RSVP at www.myacesclub.com — head to the Events tab and register there.
-
-Two days away. Send this to whoever you have been meaning to invite. Tag them below — let's see those names 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('th4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">TIKTOK + WEBSITE</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="th5">🎵 tiktok.com/@acestennisclub_ — behind the scenes and match content
-
-🌐 www.myacesclub.com — not signed up yet? Join Now. Your record is already in there 💚 @all</div>
-<button class="copy-btn" onclick="cp('th5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="th6">Two days out and the work is already done 🎾
-
-You showed up all week. You invited people. You played your matches.
-
-Saturday is just the payoff. Enjoy it 💚 @all</div>
-<button class="copy-btn" onclick="cp('th6',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="th7">If you could fix one thing about your game overnight, what would it be? 🎾
-
-Be specific — not just "everything" 😄 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('th7',this)">Copy</button></div>
 </div>
 
 <!-- FRIDAY -->
 <div id="fri" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Friday — Fun</div>
-  <div class="day-theme">Light and loose. Clinic tomorrow. Last push.</div>
+  <div class="day-theme">Light and loose. Weekend plan. Log scores.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:00 AM — Welcome</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather + weekend forecast</div>
-    <div class="order-step"><div class="order-num">3</div>9:00 AM — Court poll</div>
-    <div class="order-step"><div class="order-num">4</div>10:00 AM — Weekend plan + RSVP reminder</div>
-    <div class="order-step"><div class="order-num">5</div>11:00 AM — Merch + Instagram</div>
-    <div class="order-step"><div class="order-num">6</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">7</div>1:00 PM — Fun question</div>
+    <div class="order-step"><div class="order-num">1</div>7:00 AM — Morning + weekend forecast</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Weekend plan</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Fun question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">WELCOME</span><span class="msg-time">7:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">MORNING</span><span class="msg-time">7:00 AM</span></div>
 <div class="msg-box" id="f1">Happy Friday ACES 💚🎾
 
-Tomorrow is a big one. Beginner clinic in the morning, run club and courts all day.
+Weekend is here. Courts are open. No excuses 😄
 
-Not RSVPed yet? www.myacesclub.com → Events — do it before tonight.
-
-Not being serious today though — just get ready to have a great Saturday 😄 💪 @all</div>
-<button class="copy-btn" onclick="cp('f1',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="f2">Weekend forecast ⛈️
-Tonight — [update]
+Tonight — [update here] ⛈️
 Saturday — [update]
 Sunday — [update]
-👀 @all</div>
-<button class="copy-btn" onclick="cp('f2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-poll">COURT POLL</span><span class="msg-time">9:00 AM</span></div>
-<div class="msg-box" id="f3">Last poll of the week 📍
+Where tonight? 📍
 1️⃣ Russett Tennis Courts, Russett MD 20724
 2️⃣ Montpelier — 12771 Laurel-Bowie Rd
 3️⃣ Greenview Tennis Court
+
 @all</div>
-<button class="copy-btn" onclick="cp('f3',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('f1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">TOMORROW'S PLAN</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="f4">Saturday sorted 🎾🏃💚
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-mid">WEEKEND PLAN</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="f2">ACES weekend in three steps 🎾🏃💚
 
-9:05 AM — Laurel Run Club at Laurel Lakes
-10:30 AM — FREE Beginner Clinic at Montpelier (RSVP at www.myacesclub.com → Events)
-Anytime — play your RR match and log it the moment you finish
+1. Play your RR match — find your opponent at www.myacesclub.com → Round Robin tab
+2. Log the score immediately after — RR tab for round robin, Schedule tab for everything else, on the match itself
+3. Laurel Run Club Saturday 9:05 AM at Laurel Lakes if you are joining
 
-RR tab for round robin, Schedule tab for everything else at www.myacesclub.com
+That's it. Simple weekend. Go enjoy it 😄 @all</div>
+<button class="copy-btn" onclick="cp('f2',this)">Copy</button></div>
 
-See you out there tomorrow 😄 @all</div>
-<button class="copy-btn" onclick="cp('f4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">MERCH + INSTAGRAM</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="f5">👕 Merch at every session — Femi has it at the court
-📸 instagram.com/atcdmv — follow if you have not already
-💚 @all</div>
-<button class="copy-btn" onclick="cp('f5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="f6">The best sessions are the ones where you forget to check the time 🎾
-
-Go have one of those this weekend 💚 @all</div>
-<button class="copy-btn" onclick="cp('f6',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="f7">If every ACES member had a walk-on song when they stepped on court — what's yours? 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">FUN QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="f3">If every ACES member had a walk-on song when they stepped on court — what's yours? 🎾
 
 Song and artist. No skipping 😄 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('f7',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('f3',this)">Copy</button></div>
 </div>
 
 <!-- SATURDAY -->
 <div id="sat" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Saturday — Active</div>
-  <div class="day-theme">Clinic day. Run club. Big ACES morning.</div>
+  <div class="day-theme">Run club. Court time. Log what you play.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>7:30 AM — Run club + clinic reminder</div>
-    <div class="order-step"><div class="order-num">2</div>8:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>10:00 AM — Clinic starts in 30 mins</div>
-    <div class="order-step"><div class="order-num">4</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">5</div>1:00 PM — Question</div>
+    <div class="order-step"><div class="order-num">1</div>7:30 AM — Run club morning</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Court poll + log reminder</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-run">SATURDAY MORNING</span><span class="msg-time">7:30 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-sat">SATURDAY MORNING</span><span class="msg-time">7:30 AM</span></div>
 <div class="msg-box" id="s1">Good morning ACES 💚🏃🎾
 
-It's a big one today.
+Laurel Run Club this morning — 9:05 AM at Laurel Lakes. All paces welcome. Come move.
 
-LAUREL RUN CLUB — 9:05 AM at Laurel Lakes. All paces welcome.
-
-BEGINNER CLINIC — 10:30 AM at Montpelier. Free, led by Femi. Not RSVPed? Still welcome — just show up. www.myacesclub.com → Events if you want to register first.
-
-See you out there 💪 @all</div>
+Courts open after. Play your matches, log your scores and enjoy the rest of your Saturday 💪 @all</div>
 <button class="copy-btn" onclick="cp('s1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">8:30 AM</span></div>
-<div class="msg-box" id="s2">Today — [update here] ⛈️
-👀 @all</div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-mid">COURT POLL + LOG</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="s2">Who is playing this afternoon? 📍🎾
+
+1️⃣ Russett Tennis Courts, Russett MD 20724
+2️⃣ Montpelier — 12771 Laurel-Bowie Rd
+3️⃣ Greenview Tennis Court
+
+Play your match then log it straight away — RR tab for round robin, Schedule tab for everything else at www.myacesclub.com 💚 @all</div>
 <button class="copy-btn" onclick="cp('s2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-clinic">CLINIC IN 30 MINUTES</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="s3">We start in 30 minutes 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="s3">Best thing about playing tennis on a Saturday? 🎾
 
-📍 Montpelier Tennis Court — 12771 Laurel-Bowie Rd
-⏰ 10:30 AM | Led by Femi
-
-Bring water and comfortable shoes. See you on the court 💚 @all</div>
+Drop it 😄 👇 @all 💚</div>
 <button class="copy-btn" onclick="cp('s3',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="s4">Every expert was once a beginner 🎾
-
-Today someone stepped on a tennis court for the very first time. That's exactly what this club is built on 💚 @all</div>
-<button class="copy-btn" onclick="cp('s4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="s5">What do you wish someone had told you when you first picked up a racket? 🎾
-
-Drop it below — the beginners from today might just read this 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('s5',this)">Copy</button></div>
 </div>
 
 <!-- SUNDAY -->
 <div id="sun" class="day" style="display:none">
 <div class="order-guide">
   <div class="order-guide-title">Sunday — Reflective</div>
-  <div class="day-theme">Rest. Celebrate the clinic. Look ahead.</div>
+  <div class="day-theme">Rest. Log any stragglers. Look ahead.</div>
   <div class="order-steps">
-    <div class="order-step"><div class="order-num">1</div>9:00 AM — Rest day + clinic recap</div>
-    <div class="order-step"><div class="order-num">2</div>9:30 AM — Weather</div>
-    <div class="order-step"><div class="order-num">3</div>10:00 AM — Week ahead</div>
-    <div class="order-step"><div class="order-num">4</div>11:00 AM — Instagram</div>
-    <div class="order-step"><div class="order-num">5</div>12:00 PM — Motivation</div>
-    <div class="order-step"><div class="order-num">6</div>1:00 PM — Reflective question</div>
+    <div class="order-step"><div class="order-num">1</div>9:00 AM — Rest day</div>
+    <div class="order-step"><div class="order-num">2</div>11:00 AM — Week ahead</div>
+    <div class="order-step"><div class="order-num">3</div>1:00 PM — Reflective question</div>
   </div>
 </div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-welcome">SUNDAY REST</span><span class="msg-time">9:00 AM</span></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-am">SUNDAY REST</span><span class="msg-time">9:00 AM</span></div>
 <div class="msg-box" id="su1">Happy Sunday ACES 🙏💚
 
-Rest day. Seriously — take it.
+Rest day. Take it seriously.
 
-Yesterday was special. Run club in the morning, beginner clinic after. New people on the court, existing members showing up and showing out.
+Big week on the court — run club, matches, new faces from the clinic still settling in. The body needs a reset.
 
-This is what we are building. Proud of this community.
-
-Rest up and come back Monday ready to do it again 💪 @all</div>
+Come back Monday ready to go again 💪 @all</div>
 <button class="copy-btn" onclick="cp('su1',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-wx">WEATHER</span><span class="msg-time">9:30 AM</span></div>
-<div class="msg-box" id="su2">Today — [update] ⛈️
-Any scores from the weekend not logged yet? Do it now at www.myacesclub.com 👀 @all</div>
-<button class="copy-btn" onclick="cp('su2',this)">Copy</button></div>
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-mid">WEEK AHEAD</span><span class="msg-time">11:00 AM</span></div>
+<div class="msg-box" id="su2">Here's what's coming up 📅💚
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-rr">WEEK AHEAD</span><span class="msg-time">10:00 AM</span></div>
-<div class="msg-box" id="su3">Here's what's coming up 📅💚
-
-🎾 Missed the beginner clinic today? Register your interest at www.myacesclub.com → Events so we can plan future sessions.
-
-🎾 Round robin — new matchups Monday. Check the Round Robin tab at www.myacesclub.com first thing.
-📝 Scores not logged from this weekend? RR tab for round robin, Schedule tab for everything else, on the match itself.
+🎾 Round robin — new week of matchups Monday. Check the Round Robin tab at www.myacesclub.com first thing.
+📝 Scores from this weekend not logged? Do it now — RR tab for round robin, Schedule tab for everything else.
 🏃 Laurel Run Club — most Saturdays, Laurel Lakes, 9:05 AM
 👕 Merch — every session, Femi has it at the court
-
-🌐 www.myacesclub.com
 📸 instagram.com/atcdmv
 🎵 tiktok.com/@acestennisclub_
 
 Courts:
-Russett Tennis Courts — Russett MD 20724
+Russett — Russett MD 20724
 Montpelier — 12771 Laurel-Bowie Rd
 Greenview as needed</div>
-<button class="copy-btn" onclick="cp('su3',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('su2',this)">Copy</button></div>
 
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-social">INSTAGRAM</span><span class="msg-time">11:00 AM</span></div>
-<div class="msg-box" id="su4">Sunday reminder 📲
-
-instagram.com/atcdmv — follow, share and tag someone who should be in this club 💚 @all</div>
-<button class="copy-btn" onclick="cp('su4',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-mot">MOTIVATION</span><span class="msg-time">12:00 PM</span></div>
-<div class="msg-box" id="su5">Every week you show up is a deposit 🎾
-
-Fitness. Game. Community. It all compounds.
-
-Keep showing up 💚 @all</div>
-<button class="copy-btn" onclick="cp('su5',this)">Copy</button></div>
-
-<div class="msg-wrap"><div class="msg-header"><span class="badge b-q">QUESTION</span><span class="msg-time">1:00 PM</span></div>
-<div class="msg-box" id="su6">One word to describe your ACES week 🎾
+<div class="msg-wrap"><div class="msg-header"><span class="badge b-pm">QUESTION</span><span class="msg-time">1:00 PM</span></div>
+<div class="msg-box" id="su3">One word to describe your week on the court 🎾
 
 Honest, funny or both. Drop it 👇 @all 💚</div>
-<button class="copy-btn" onclick="cp('su6',this)">Copy</button></div>
+<button class="copy-btn" onclick="cp('su3',this)">Copy</button></div>
 </div>
 
 </div>
